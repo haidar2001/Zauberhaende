@@ -50,9 +50,16 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <Button size="sm" className="ml-4 hover:scale-105 transition-transform duration-200">
-              <a href="tel:+49222262779">Anrufen</a>
-            </Button>
+            <Button 
+  asChild
+  size="sm" 
+  className="ml-4 hover:scale-105 transition-transform duration-200"
+>
+  <a href="tel:+49222262779" aria-label="Jetzt anrufen unter +49 2222 62779">
+    Anrufen
+  </a>
+</Button>
+
           </div>
 
           {/* Mobile menu button */}
@@ -87,9 +94,16 @@ export function Navigation() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button size="sm" className="w-full hover:scale-105 transition-transform duration-200">
-                  <a href="tel:+49222262779">Anrufen</a>
-                </Button>
+                <Button 
+  asChild 
+  size="sm" 
+  className="w-full hover:scale-105 transition-transform duration-200"
+>
+  <a href="tel:+49222262779" aria-label="Jetzt anrufen unter +49 2222 62779">
+    Anrufen
+  </a>
+</Button>
+
               </div>
             </div>
           </div>

@@ -57,12 +57,21 @@ export default function HomePage() {
                 </h1>
               </header>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button size="lg" className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <a href="tel:+49222262779" className="flex items-center">
-                    Jetzt anrufen
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
+                <Button 
+  size="lg" 
+  className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
+  asChild
+>
+  <a 
+    href="tel:+49222262779" 
+    className="flex items-center" 
+    aria-label="Jetzt anrufen unter +49 2222 62779"
+  >
+    Jetzt anrufen
+    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+  </a>
+</Button>
+
                 <Button
                   variant="outline"
                   size="lg"
