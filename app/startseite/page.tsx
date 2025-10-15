@@ -25,15 +25,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-<<<<<<< HEAD
       <section className="relative min-h-screen w-full overflow-hidden">
         {/* Video Background - Full width */}
         <div className="absolute inset-0 w-full h-full">
-=======
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-fade">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full video-fade">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
           <video
             autoPlay
             muted
@@ -45,7 +39,6 @@ export default function HomePage() {
           >
             <source src="/professional-tailor-sewing-machine-working-in-mode.mp4" type="video/mp4" />
           </video>
-<<<<<<< HEAD
         </div>
 
         {/* Gradient Overlay - Dark on left (desktop) or bottom (mobile), fading to transparent */}
@@ -79,43 +72,6 @@ export default function HomePage() {
                   <Link href="/leistungen">Unsere Leistungen</Link>
                 </Button>
               </div>
-=======
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-card z-[5]" />
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center max-w-4xl mx-auto">
-            <header>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 text-balance animate-in fade-in slide-in-from-bottom duration-700">
-                <span className="text-accent font-semibold">Zauberhände</span>
-                <span className="block text-white font-light animate-in fade-in slide-in-from-bottom duration-700 delay-300">
-                  Änderungsschneiderei in Alfter bei Bonn & Bornheim
-                </span>
-              </h1>
-            </header>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom duration-700 delay-500">
-              <Button
-                size="lg"
-                className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 transition-transform duration-200"
-              >
-                <a href="tel:+49222262779" className="flex items-center">
-                  Jetzt anrufen
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-base px-8 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all duration-200 bg-transparent"
-                asChild
-              >
-                <Link href="/leistungen">Unsere Leistungen</Link>
-              </Button>
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
             </div>
           </div>
         </div>
@@ -124,28 +80,17 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-12">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
               Unsere Hauptleistungen in Alfter, Bonn & Bornheim
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-=======
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500">
-              Unsere Hauptleistungen in Alfter, Bonn & Bornheim
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom duration-500 delay-200">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               Von präzisen Änderungen bis zur professionellen Reinigung – wir kümmern uns um alle Ihre Textilien mit
               höchster Sorgfalt.
             </p>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-<<<<<<< HEAD
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] bg-background border-border">
-=======
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-in fade-in slide-in-from-bottom duration-500 delay-100 bg-background border-border">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
                   <Scissors className="h-8 w-8 text-accent" />
@@ -171,12 +116,9 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
+            
 
-<<<<<<< HEAD
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] bg-background border-border">
-=======
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] animate-in fade-in slide-in-from-bottom duration-500 delay-200 bg-background border-border">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
                   <Shirt className="h-8 w-8 text-accent" />
@@ -200,11 +142,7 @@ export default function HomePage() {
             </Card>
           </div>
 
-<<<<<<< HEAD
           <div className="text-center">
-=======
-          <div className="text-center animate-in fade-in slide-in-from-bottom duration-500 delay-500">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
             <Button
               size="lg"
               className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 transition-transform duration-200"
@@ -222,21 +160,13 @@ export default function HomePage() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-12">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-=======
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               Warum <span className="text-accent font-semibold">Zauberhände</span>?
             </h2>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
             <article className="text-center">
-=======
-            <article className="text-center animate-in fade-in slide-in-from-bottom duration-500 delay-200">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
                 <Leaf className="h-8 w-8 text-accent" />
               </div>
@@ -247,11 +177,7 @@ export default function HomePage() {
               </p>
             </article>
 
-<<<<<<< HEAD
             <article className="text-center">
-=======
-            <article className="text-center animate-in fade-in slide-in-from-bottom duration-500 delay-300">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
                 <Clock className="h-8 w-8 text-accent" />
               </div>
@@ -262,11 +188,7 @@ export default function HomePage() {
               </p>
             </article>
 
-<<<<<<< HEAD
             <article className="text-center">
-=======
-            <article className="text-center animate-in fade-in slide-in-from-bottom duration-500 delay-400">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="h-8 w-8 text-accent" />
               </div>
@@ -282,26 +204,15 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
               Ihre Schneiderei in Alfter - Gut erreichbar aus Bonn & Bornheim
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-=======
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500">
-              Ihre Schneiderei in Alfter - Gut erreichbar aus Bonn & Bornheim
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom duration-500 delay-200">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               Unsere Änderungsschneiderei in <strong className="text-accent">Alfter</strong> ist zentral gelegen und
               damit der ideale Anlaufpunkt für Kund*innen aus <strong className="text-accent">Bonn</strong>,{" "}
               <strong className="text-accent">Bornheim</strong> und der gesamten Region.
             </p>
-<<<<<<< HEAD
             <p className="text-muted-foreground text-lg mt-4">
-=======
-            <p className="text-muted-foreground text-lg mt-4 animate-in fade-in slide-in-from-bottom duration-500 delay-300">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               Ob mit <strong className="text-accent">Bus, Bahn oder Auto</strong> – von Bonn aus erreichen Sie uns in
               nur 14 Minuten, von Bornheim in etwa 10 Minuten. Perfekt für alle, die eine professionelle Schneiderei in
               Bonn- und Bornheim-Nähe suchen.
@@ -309,11 +220,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-<<<<<<< HEAD
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-background border-border">
-=======
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500 delay-100 bg-background border-border">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <MapPin className="h-6 w-6 text-accent" />
@@ -327,11 +234,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-<<<<<<< HEAD
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-accent/5 border-accent/20">
-=======
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500 delay-200 bg-accent/5 border-accent/20">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Train className="h-6 w-6 text-accent" />
@@ -345,11 +248,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-<<<<<<< HEAD
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-accent/5 border-accent/20">
-=======
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500 delay-300 bg-accent/5 border-accent/20">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
@@ -363,11 +262,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-<<<<<<< HEAD
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-background border-border">
-=======
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500 delay-400 bg-background border-border">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
@@ -378,11 +273,7 @@ export default function HomePage() {
             </Card>
           </div>
 
-<<<<<<< HEAD
           <div className="text-center">
-=======
-          <div className="text-center animate-in fade-in slide-in-from-bottom duration-500 delay-500">
->>>>>>> 590992c4824627d5fe3af3e9e4825b4789df489d
             <Button
               size="lg"
               className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 transition-transform duration-200"
