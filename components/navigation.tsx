@@ -88,7 +88,7 @@ export function Navigation() {
               ))}
               <div className="px-3 py-2">
                 <Button size="sm" className="w-full hover:scale-105 transition-transform duration-200">
-                  <a href="tel:+4922819999999">Anrufen</a>
+                  <a href="tel:+49222262779">Anrufen</a>
                 </Button>
               </div>
             </div>

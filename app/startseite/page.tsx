@@ -84,7 +84,7 @@ export default function HomePage() {
               Unsere Hauptleistungen in Alfter, Bonn & Bornheim
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Von präzisen Änderungen bis zur professionellen Reinigung – wir kümmern uns um alle Ihre Textilien mit
+              Von präzisen Änderungen bis zur professionellen Reinigung - wir kümmern uns um alle Ihre Textilien mit
               höchster Sorgfalt.
             </p>
           </header>
@@ -116,7 +116,7 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
-            
+
 
             <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] bg-background border-border">
               <CardContent className="p-8">
@@ -213,7 +213,7 @@ export default function HomePage() {
               <strong className="text-accent">Bornheim</strong> und der gesamten Region.
             </p>
             <p className="text-muted-foreground text-lg mt-4">
-              Ob mit <strong className="text-accent">Bus, Bahn oder Auto</strong> – von Bonn aus erreichen Sie uns in
+              Ob mit <strong className="text-accent">Bus, Bahn oder Auto</strong> - von Bonn aus erreichen Sie uns in
               nur 14 Minuten, von Bornheim in etwa 10 Minuten. Perfekt für alle, die eine professionelle Schneiderei in
               Bonn- und Bornheim-Nähe suchen.
             </p>
