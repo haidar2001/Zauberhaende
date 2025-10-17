@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: {
-    default: "Änderungsschneiderei Bonn & Bornheim - Zauberhände Schneiderei Alfter",
+    default: "Änderungsschneiderei Bonn & Bornheim - Zauberhände Alfter",
     template: "%s | Zauberhände",
   },
   description:
