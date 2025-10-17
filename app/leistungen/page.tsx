@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Entdecken Sie unser komplettes Leistungsspektrum: Professionelle Änderungsschneiderei, Textilreinigung, Reparaturen und Express-Service. Höchste Qualität in Alfter.",
   keywords:
-    "Änderungsschneiderei, Hosenkürzen, Ärmelkürzung, Textilreinigung, Kleiderreparatur, Express Service, Zauberhände Alfter",
+    "Änderungsschneiderei, Hosenkürzen, Ärmelkürzung, Kleideränderung, Kleiderreparatur, Textilreinigung, Express Schneiderei, Maßänderung, Reißverschluss reparieren, Mantel kürzen, Jackenänderung, Taschen reparieren, Zauberhände Alfter, Bonn, Alfter, Bornheim, Wesseling",
 }
 
 export default function LeistungenPage() {

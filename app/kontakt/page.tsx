@@ -7,8 +7,8 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Kontakt - Zauberhände Änderungsschneiderei | Alfter",
   description:
-    "Kontaktieren Sie Zauberhände für Terminvereinbarungen und Beratung. Holzgasse 13a, 53347 Alfter. Tel: +49 2281 999 9999. Öffnungszeiten Mo-Sa.",
-  keywords: "Kontakt Änderungsschneiderei, Termin vereinbaren, Schneider Alfter, Öffnungszeiten, Beratung, Zauberhände",
+    "Kontaktieren Sie Zauberhände für Beratung. Holzgasse 13a, 53347 Alfter. Tel: +492222 62779. Öffnungszeiten Mo-Sa.",
+  keywords: "Kontakt Änderungsschneiderei, Termin vereinbaren, Schneider Alfter, Schneider Roisdorf, Öffnungszeiten, persönliche Beratung, Zauberhände Alfter, Änderungsschneiderei Bonn, Änderungsschneiderei Bornheim, Änderungsschneiderei Wesseling, Änderungsschneiderei Roisdorf, Anfrage senden, Kontaktformular, Termin buchen",
 }
 
 export default function KontaktPage() {
