@@ -34,10 +34,10 @@ export default function HomePage() {
             loop
             playsInline
             preload="metadata"
-            poster="/professional-tailor-workspace.jpg"
+            poster="/alfter-video-thumbnail.webp"
             className="w-full h-full object-cover"
           >
-            <source src="/professional-tailor-sewing-machine-working-in-mode.mp4" type="video/mp4" />
+            <source src="/aenderungsschneiderei-alfter-hero-video.mp4" type="video/mp4" />
           </video>
         </div>
 
