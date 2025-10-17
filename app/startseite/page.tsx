@@ -7,7 +7,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Änderungsschneiderei Bonn & Bornheim - Zauberhände | Schneiderei Alfter",
+  title: "Zauberhände Änderungsschneiderei Alfter bei Bonn & Bornheim",
   description:
     "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim. Professionelle Schneiderarbeiten, Hosenkürzen, Kleideränderungen & Textilreinigung mit Abholservice. Nur 14 Min. von Bonn, 10 Min. von Bornheim.",
   keywords:
