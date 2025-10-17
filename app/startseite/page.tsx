@@ -9,7 +9,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Änderungsschneiderei Alfter bei Bonn & Bornheim",
   description:
-    "Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosenkürzen, Kleideränderungen & Textilreinigung - nur 14 Min. von Bonn und 10 Min. von Bornheim entfernt",
+    "Änderungsschneiderei in Alfter bei Bonn, Bornheim & Wesseling: Hosenkürzen, Kleideränderungen & Textilreinigung - nur 14 Min. von Bonn und 10 Min. von Bornheim entfernt",
   keywords:
     "Änderungsschneiderei Bonn, Schneiderei Bonn, Änderungsschneiderei Bornheim, Schneiderei Bornheim, Änderungsschneiderei Alfter, Schneider Bonn, Schneider Bornheim, Hosenkürzen Bonn, Hosenkürzen Bornheim, Textilreinigung Bonn, Textilreinigung Bornheim, Reinigung Bonn, Reinigung Bornheim, Kleideränderung Bonn, Kleideränderung Bornheim, Schneiderei Alfter, Änderungsschneiderei Bonn Duisdorf, Schneiderei in der Nähe, Express Service Bonn, Express Service Bornheim, Lederreinigung Bonn, Lederreinigung Bornheim, Reinigungsannahme Bonn, Reinigungsannahme Bornheim, Textilpflege Bonn, Textilpflege Bornheim",
   openGraph: {
