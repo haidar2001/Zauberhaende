@@ -8,7 +8,7 @@ import type { Metadata } from "next"
 import { ProgressiveHeroMedia } from "@/components/progressive-hero-media"
 
 export const metadata: Metadata = {
-  title: "Änderungsschneiderei Bonn & Bornheim - Zauberhände | Schneiderei Alfter",
+  title: "Änderungsschneiderei Alfter bei Bonn & Bornheim",
   description:
     "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim: Maßgeschneiderte Änderungen, Hosenkürzen, Kleideranpassungen und Textilreinigung - nur 14 Min. von Bonn und 10 Min. von Bornheim entfernt.",
   keywords:
