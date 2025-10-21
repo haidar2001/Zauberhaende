@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/85 lg:via-black/40 lg:to-transparent" />
 
         {/* Text Content - Left side on desktop, bottom on mobile */}
-        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-8 lg:pb-0">
+        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-30 lg:pb-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-xl lg:max-w-2xl">
               <header>
@@ -66,7 +66,7 @@ export default function HomePage() {
               Unsere Hauptleistungen in Alfter, Bonn & Bornheim
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Von präzisen Änderungen bis zur professionellen Reinigung – wir kümmern uns um alle Ihre Textilien mit
+              Von präzisen Änderungen bis zur professionellen Reinigung - wir kümmern uns um alle Ihre Textilien mit
               höchster Sorgfalt.
             </p>
           </header>
