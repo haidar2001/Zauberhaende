@@ -117,44 +117,7 @@ export default function GaleriePage() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-foreground mb-3">📝 So fügen Sie neue Bilder/Videos hinzu:</h3>
-              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
-                <li>
-                  Speichern Sie Ihre Bilder/Videos im Ordner{" "}
-                  <code className="bg-muted px-2 py-1 rounded">public/gallery/</code>
-                </li>
-                <li>
-                  Öffnen Sie die Datei <code className="bg-muted px-2 py-1 rounded">data/gallery.json</code>
-                </li>
-                <li>
-                  Fügen Sie einen neuen Eintrag hinzu mit:
-                  <ul className="ml-6 mt-1 space-y-1 list-disc">
-                    <li>
-                      <code className="bg-muted px-1 rounded">type</code>: "image" oder "video"
-                    </li>
-                    <li>
-                      <code className="bg-muted px-1 rounded">src</code>: Pfad zur Datei (z.B. "/gallery/mein-bild.jpg")
-                    </li>
-                    <li>
-                      <code className="bg-muted px-1 rounded">title</code>: Titel
-                    </li>
-                    <li>
-                      <code className="bg-muted px-1 rounded">description</code>: Beschreibung
-                    </li>
-                  </ul>
-                </li>
-                <li>Die Galerie wird automatisch aktualisiert</li>
-              </ol>
-              <p className="mt-4 text-xs text-muted-foreground">
-                Tipp: Verwenden Sie optimierte Bilder (WebP/JPEG, max. 1920x1440px) und Videos (MP4, max. 1080p) für
-                beste Performance.
-              </p>
-            </div>
-          </div>
-        </section>
+      
       </main>
 
       {lightboxOpen && (
