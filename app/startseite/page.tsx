@@ -8,9 +8,9 @@ import type { Metadata } from "next"
 import { ProgressiveHeroMedia } from "@/components/progressive-hero-media"
 
 export const metadata: Metadata = {
-  title: "Schneiderei Alfter bei Bonn & Bornheim | Zauberhände",
+  title: "Schneiderei Alfter bei Bonn & Bornheim",
   description:
-    "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim. Professionelle Schneiderarbeiten, Hosen- & Kleideränderungen sowie Textilreinigung. Nur 14 Min. von Bonn, 10 Min. von Bornheim.",
+    "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim. Professionelle Schneiderarbeiten, Hosen & Kleideränderungen sowie Textilreinigung. Nur wenige Minuten von Bonn und Bornheim.",
   keywords:
     "Änderungsschneiderei Bonn, Schneiderei Bonn, Änderungsschneiderei Bornheim, Schneiderei Bornheim, Änderungsschneiderei Alfter, Schneider Bonn, Schneider Bornheim, Hosenkürzen Bonn, Hosenkürzen Bornheim, Textilreinigung Bonn, Textilreinigung Bornheim, Reinigung Bonn, Reinigung Bornheim, Kleideränderung Bonn, Kleideränderung Bornheim, Schneiderei Alfter, Änderungsschneiderei Bonn Duisdorf, Schneiderei in der Nähe, Express Service Bonn, Express Service Bornheim, Lederreinigung Bonn, Lederreinigung Bornheim, Reinigungsannahme Bonn, Reinigungsannahme Bornheim, Textilpflege Bonn, Textilpflege Bornheim",
 }
