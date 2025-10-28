@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/85 lg:via-black/40 lg:to-transparent" />
 
         {/* Text Content - Left side on desktop, bottom on mobile */}
-        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-8 lg:pb-0">
+        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-30 lg:pb-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-xl lg:max-w-2xl">
               <header>
@@ -66,8 +66,8 @@ export default function HomePage() {
               Unsere Hauptleistungen in Alfter, Bonn & Bornheim
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Von präzisen Änderungen bis zur professionellen Reinigung – wir kümmern uns um alle Ihre Textilien mit
-              höchster Sorgfalt.
+              Von präzisen Änderungen bis zur schonenden Textilreinigung  in unserer Änderungsschneiderei in Alfter bei 
+              Bonn & Bornheim kümmern wir uns mit höchster Sorgfalt um Ihre Kleidung.
             </p>
           </header>
 
@@ -79,8 +79,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Änderungsschneiderei</h3>
                 <p className="text-muted-foreground text-center mb-6">
-                  Professionelle Anpassungen für perfekte Passform. Hosenkürzen, Ärmelkürzungen, Taillenweite und vieles
-                  mehr.
+                  Von Hosenkürzungen bis zu Lederänderungen - unsere Änderungsschneiderei sorgt für exakte Passform, hochwertige Verarbeitung und langanhaltenden Tragekomfort.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -106,8 +105,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Reinigungsannahme</h3>
                 <p className="text-muted-foreground text-center mb-6">
-                  Zuverlässige Reinigungsdienstleistungen für alle Textilien. Schonende Behandlung und termingerechte
-                  Abholung.
+                 Wir übernehmen die Annahme und Weitergabe Ihrer Textil- und Lederreinigung. Alle Stücke werden sorgfältig behandelt, 
+                 an unsere Fachreinigung übermittelt und termingerecht zur Abholung bereitgestellt.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
