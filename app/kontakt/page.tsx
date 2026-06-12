@@ -115,8 +115,8 @@ export default function KontaktPage() {
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Mail className="h-4 w-4" />
-                    <a href="mailto:Kontakt@zh-alfter.de" className="hover:text-accent transition-colors">
-                      Kontakt@zh-alfter.de
+                    <a href="mailto:zauberhaende.alfter@gmail.com" className="hover:text-accent transition-colors">
+                      zauberhaende.alfter@gmail.com
                     </a>
                   </div>
                  
@@ -222,7 +222,7 @@ export default function KontaktPage() {
                       +492222 62779
                     </a>
                     <a
-                      href="mailto:Kontakt@zh-alfter.de"
+                      href="mailto:zauberhaende.alfter@gmail.com"
                       className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors duration-200 hover:scale-105 transform"
                     >
                       <Mail className="h-4 w-4 mr-2" />
