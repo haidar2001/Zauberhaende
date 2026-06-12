@@ -33,8 +33,14 @@ export default function HomePage() {
               <header>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
                   <span className="text-accent font-semibold">Zauberhände</span>
+<<<<<<< HEAD
                   <br />
                   Änderungsschneiderei in Alfter bei Bonn & Bornheim
+=======
+                  <span className="block text-white font-light mt-2">
+                    Änderungsschneiderei in Alfter bei Bonn & Bornheim
+                  </span>
+>>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
                 </h1>
               </header>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">

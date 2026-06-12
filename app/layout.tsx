@@ -106,7 +106,11 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
+<<<<<<< HEAD
     
+=======
+    generator: 'v0.app'
+>>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
 }
 
 export default function RootLayout({
@@ -236,7 +240,15 @@ export default function RootLayout({
                   },
                 ],
               },
+<<<<<<< HEAD
               
+=======
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                reviewCount: "127",
+              },
+>>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
             }),
           }}
         />

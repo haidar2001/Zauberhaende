@@ -86,10 +86,17 @@ export function Footer() {
               <div className="flex items-center space-x-3 group">
                 <Mail className="h-4 w-4 text-accent group-hover:scale-110 transition-transform duration-200" />
                 <a
+<<<<<<< HEAD
                   href="mailto:zauberhaende.alfter@gmail.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   zauberhaende.alfter@gmail.com
+=======
+                  href="mailto:kontakt@zh-alfter.de"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  kontakt@zh-alfter.de
+>>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
                 </a>
               </div>
             </div>
