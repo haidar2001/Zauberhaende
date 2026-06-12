@@ -31,11 +31,7 @@ export default function ImpressumPage() {
               <h2 className="text-2xl font-semibold text-foreground mb-4">Kontakt</h2>
               <div className="text-muted-foreground space-y-2">
                 <p>Telefon: 02222 62779</p>
-<<<<<<< HEAD
-                <p>E-Mail: zauberhaende.alfter@gmail.com</p>
-=======
                 <p>E-Mail: Kontakt@zh-alfter.de</p>
->>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
               </div>
             </section>
 

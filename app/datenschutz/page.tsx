@@ -52,11 +52,7 @@ export default function DatenschutzPage() {
                     <p>Holzgasse 13a</p>
                     <p>53347 Alfter</p>
                     <p>Telefon: +490222262779</p>
-<<<<<<< HEAD
-                    <p>E-Mail: zauberhaende.alfter@gmail.com</p>
-=======
                     <p>E-Mail: Kontakt@zh-alfter.de</p>
->>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
                   </div>
                 </div>
               </div>

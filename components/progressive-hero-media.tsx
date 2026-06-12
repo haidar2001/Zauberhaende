@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import Image from "next/image";
-
-export function ProgressiveHeroMedia() {
-  return (
-    <div className="absolute inset-0">
-      <Image
-        src="/alfter-video-thumbnail.webp"
-        alt="Professionelle Schneiderei Arbeitsplatz"
-        fill
-        className="object-cover"
-        priority
-        quality={85}
-      />
-    </div>
-  );
-}
-=======
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -105,4 +87,3 @@ export function ProgressiveHeroMedia() {
     </div>
   );
 }
->>>>>>> 8c6cbf548540e75e6e78e5b997b9b0619d642830
