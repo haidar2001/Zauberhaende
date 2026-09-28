@@ -75,12 +75,19 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://zh-alfter.de",
+              "@id": "https://zh-alfter.de/#business",
               name: "Zauberhände Änderungsschneiderei",
               alternateName: "Zauberhände",
               description:
                 "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Minuten von Bonn, 10 Minuten von Bornheim entfernt.",
               url: "https://zh-alfter.de",
+              image: "https://zh-alfter.de/og-image.jpg",
+              logo: "https://zh-alfter.de/images/logo.png",
+              sameAs: [
+                "https://www.facebook.com/people/Zauberh%C3%A4nde-%C3%84nderungsschneiderei/61557229961543/",
+                "https://www.tiktok.com/@zh_alfter",
+                "https://de.pinterest.com/zauberhaende_alfter/",
+              ],
               telephone: "+49-2222-62779",
               email: "zauberhaende.alfter@gmail.com",
               address: {
@@ -187,6 +194,15 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
+                      name: "Brautkleid Anpassung",
+                      description: "Spezialisierte Anpassungen für Brautkleider und festliche Kleidung",
+                      areaServed: ["Alfter", "Bonn", "Bornheim", "Wesseling"],
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
                       name: "Express-Service",
                       description: "Schnelle Bearbeitung für eilige Aufträge",
                       areaServed: ["Alfter", "Bonn", "Bornheim", "Wesseling"],
@@ -199,7 +215,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <Suspense fallback={null}>{children}</Suspense>
         <CookieBanner />
         <SpeedInsights />
 
