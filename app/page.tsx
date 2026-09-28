@@ -293,7 +293,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">Alfter</h3>
+                <h3 className="text-lg font-semibold text-accent mb-2">
+                  <Link href="/aenderungsschneiderei-alfter" className="hover:underline">
+                    Alfter
+                  </Link>
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Unser Hauptstandort - mitten im
                   <br />
@@ -307,7 +311,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Train className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">Bonn</h3>
+                <h3 className="text-lg font-semibold text-accent mb-2">
+                  <Link href="/aenderungsschneiderei-bonn" className="hover:underline">
+                    Bonn
+                  </Link>
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Nur 14 Minuten mit öffentlichen
                   <br />
@@ -321,7 +329,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">Bornheim</h3>
+                <h3 className="text-lg font-semibold text-accent mb-2">
+                  <Link href="/aenderungsschneiderei-bornheim" className="hover:underline">
+                    Bornheim
+                  </Link>
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Etwa 10 Minuten Fahrtzeit - gute
                   <br />
@@ -335,7 +347,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">Wesseling</h3>
+                <h3 className="text-lg font-semibold text-accent mb-2">
+                  <Link href="/aenderungsschneiderei-wesseling" className="hover:underline">
+                    Wesseling
+                  </Link>
+                </h3>
                 <p className="text-sm text-muted-foreground">Nur 20 Minuten mit dem Auto</p>
               </CardContent>
             </Card>
