@@ -8,6 +8,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getLocation, locations } from "@/lib/locations"
 import { services } from "@/lib/services"
+import { MAPS_URL } from "@/lib/business"
 
 const baseUrl = "https://zh-alfter.de"
 
@@ -75,6 +76,14 @@ export default function LocationPage({ params }: { params: { standort: string } 
                   </span>
                 </p>
                 <p className="text-muted-foreground">{location.arrival}</p>
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-accent font-medium hover:underline"
+                >
+                  Route in Google Maps planen
+                </a>
                 <p className="flex items-start gap-2 text-muted-foreground">
                   <DoorOpen className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                   Ohne Termin – kommen Sie einfach vorbei.

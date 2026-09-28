@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Leistungen – Änderungsschneiderei Alfter",
   alternates: { canonical: "/leistungen" },
   description:
-    "Entdecken Sie unser komplettes Leistungsspektrum: Professionelle Änderungsschneiderei, Textilreinigung, Reparaturen und Express-Service. Höchste Qualität in Alfter.",
+    "Alle Leistungen der Zauberhände Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosen kürzen, Brautkleider ändern, Reparaturen, Leder und Reinigung. Ohne Termin.",
 }
 
 export default function LeistungenPage() {

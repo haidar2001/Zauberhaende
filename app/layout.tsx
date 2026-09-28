@@ -6,6 +6,7 @@ import "./globals.css"
 import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { MAPS_URL } from "@/lib/business"
 
 
 export const metadata: Metadata = {
@@ -82,6 +83,7 @@ export default function RootLayout({
                 "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Minuten von Bonn, 10 Minuten von Bornheim entfernt.",
               url: "https://zh-alfter.de",
               image: "https://zh-alfter.de/og-image.jpg",
+              hasMap: MAPS_URL,
               logo: "https://zh-alfter.de/images/logo.png",
               sameAs: [
                 "https://www.facebook.com/people/Zauberh%C3%A4nde-%C3%84nderungsschneiderei/61557229961543/",

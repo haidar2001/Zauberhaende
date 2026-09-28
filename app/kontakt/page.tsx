@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import type { Metadata } from "next"
+import { MAPS_URL } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: "Kontakt & Öffnungszeiten – Änderungsschneiderei Alfter",
@@ -95,6 +96,14 @@ export default function KontaktPage() {
                     <br />
                     Parkplätze vor dem Geschäft
                   </p>
+                  <a
+                    href={MAPS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-accent font-medium hover:underline"
+                  >
+                    Route in Google Maps planen
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -133,7 +142,7 @@ export default function KontaktPage() {
                 <h3 className="text-xl font-semibold text-foreground mb-4">Öffnungszeiten</h3>
                 <div className="text-muted-foreground space-y-2">
                   <div className="flex justify-between">
-                    <span>Montag - Freitag:</span>
+                    <span>Mo, Di, Do, Fr:</span>
                     <span>10:00 - 13:00</span>
                   </div>
                   <div className="flex justify-between">
@@ -141,7 +150,7 @@ export default function KontaktPage() {
                     <span>14:00 - 18:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Samstag & Mittwoch:</span>
+                    <span>Mittwoch & Samstag:</span>
                     <span>10:00 - 13:00</span>
                   </div>
                   <div className="flex justify-between">

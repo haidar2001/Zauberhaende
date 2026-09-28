@@ -100,7 +100,7 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">Öffnungszeiten</h3>
             <div className="space-y-3 text-primary-foreground/80">
               <div>
-                <p className="font-medium">Montag bis Freitag:</p>
+                <p className="font-medium">Mo, Di, Do, Fr:</p>
                 <p className="text-sm">10:00–13:00 Uhr</p>
                 <p className="text-sm">14:00–18:00 Uhr</p>
               </div>
@@ -129,7 +129,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center animate-in fade-in slide-in-from-bottom duration-500 delay-600">
           <p className="text-primary-foreground/60 text-sm">
-            © 2025 Zauberhände Änderungsschneiderei. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Zauberhände Änderungsschneiderei. Alle Rechte vorbehalten.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
