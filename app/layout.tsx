@@ -15,44 +15,6 @@ export const metadata: Metadata = {
   },
   description:
     "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Schneiderei für Hosenkürzen, Kleideränderungen & Reinigung mit Abholservice. Nur 14 Min. von Bonn, 10 Min. von Bornheim. Express-Service verfügbar.",
-  keywords: [
-    "Änderungsschneiderei Bonn",
-    "Schneiderei Bonn",
-    "Änderungsschneiderei Bornheim",
-    "Schneiderei Bornheim",
-    "Änderungsschneiderei Alfter",
-    "Schneider Bonn",
-    "Schneider Bornheim",
-    "Hosenkürzen Bonn",
-    "Hosenkürzen Bornheim",
-    "Textilreinigung Bonn",
-    "Textilreinigung Bornheim",
-    "Reinigung Bonn",
-    "Reinigung Bornheim",
-    "Reinigungsannahme Bonn",
-    "Reinigungsannahme Bornheim",
-    "Lederreinigung Bonn",
-    "Lederreinigung Bornheim",
-    "Kleideränderung Bonn",
-    "Kleideränderung Bornheim",
-    "Schneiderei Alfter",
-    "Änderungsschneiderei Bonn Duisdorf",
-    "Schneiderei in der Nähe",
-    "Schneiderei Bonn Umgebung",
-    "Schneiderei Bornheim Umgebung",
-    "Hosenkürzen Alfter",
-    "Textilreparatur Bonn",
-    "Textilreparatur Bornheim",
-    "Express Service Bonn",
-    "Express Service Bornheim",
-    "Textilpflege Bonn",
-    "Textilpflege Bornheim",
-    "Schneider Alfter",
-    "Änderungen Bonn",
-    "Änderungen Bornheim",
-    "Bornheim",
-    "Wesseling",
-  ],
   authors: [{ name: "Zauberhände Änderungsschneiderei" }],
   creator: "Zauberhände Änderungsschneiderei",
   publisher: "Zauberhände Änderungsschneiderei",
@@ -62,17 +24,10 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL("https://zh-alfter.de"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "de-DE": "/",
-    },
-  },
   openGraph: {
     title: "Änderungsschneiderei Bonn & Bornheim - Zauberhände Schneiderei Alfter",
     description:
       "Professionelle Änderungsschneiderei & Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Min. von Bonn, 10 Min. von Bornheim. Hosenkürzen, Kleideränderungen und Reinigung mit Abholservice.",
-    url: "https://zh-alfter.de",
     siteName: "Zauberhände",
     locale: "de_DE",
     type: "website",
@@ -103,9 +58,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
     generator: 'v0.app'
 }
 
@@ -130,7 +82,7 @@ export default function RootLayout({
                 "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Minuten von Bonn, 10 Minuten von Bornheim entfernt.",
               url: "https://zh-alfter.de",
               telephone: "+49-2222-62779",
-              email: "kontakt@zh-alfter.de",
+              email: "zauberhaende.alfter@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Holzgasse 13a",
@@ -241,12 +193,7 @@ export default function RootLayout({
                     },
                   },
                 ],
-              },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.8",
-                reviewCount: "127",
-              },
+              }
             }),
           }}
         />

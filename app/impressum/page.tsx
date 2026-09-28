@@ -3,7 +3,8 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Impressum - Zauberhände Änderungsschneiderei",
+  title: "Impressum",
+  alternates: { canonical: "/impressum" },
   description: "Impressum und rechtliche Angaben der Zauberhände Änderungsschneiderei in Alfter",
 }
 

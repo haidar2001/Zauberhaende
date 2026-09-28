@@ -5,10 +5,10 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Kontakt - Zauberhände Änderungsschneiderei | Alfter",
+  title: "Kontakt & Öffnungszeiten – Änderungsschneiderei Alfter",
+  alternates: { canonical: "/kontakt" },
   description:
-    "Kontaktieren Sie Zauberhände für Terminvereinbarungen und Beratung. Holzgasse 13a, 53347 Alfter. Tel: +49 2281 999 9999. Öffnungszeiten Mo-Sa.",
-  keywords: "Kontakt Änderungsschneiderei, Termin vereinbaren, Schneider Alfter, Öffnungszeiten, Beratung, Zauberhände",
+    "Kontaktieren Sie Zauberhände für Terminvereinbarungen und Beratung. Holzgasse 13a, 53347 Alfter. Tel: 02222 62779. Öffnungszeiten Mo-Sa.",
 }
 
 export default function KontaktPage() {

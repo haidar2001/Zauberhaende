@@ -7,11 +7,10 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Leistungen - Zauberhände Änderungsschneiderei | Alfter",
+  title: "Leistungen – Änderungsschneiderei Alfter",
+  alternates: { canonical: "/leistungen" },
   description:
     "Entdecken Sie unser komplettes Leistungsspektrum: Professionelle Änderungsschneiderei, Textilreinigung, Reparaturen und Express-Service. Höchste Qualität in Alfter.",
-  keywords:
-    "Änderungsschneiderei, Hosenkürzen, Ärmelkürzung, Textilreinigung, Kleiderreparatur, Express Service, Zauberhände Alfter",
 }
 
 export default function LeistungenPage() {
@@ -289,7 +288,7 @@ export default function LeistungenPage() {
               variant="secondary"
               className="text-base px-8 hover:scale-105 transition-transform duration-200"
             >
-              <a href="tel:+4922819999999" className="flex items-center">
+              <a href="tel:+49222262779" className="flex items-center">
                 Jetzt anrufen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>

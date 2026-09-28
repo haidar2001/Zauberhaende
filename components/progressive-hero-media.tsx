@@ -7,6 +7,7 @@ export function ProgressiveHeroMedia() {
         src="/alfter-video-thumbnail.webp"
         alt="Professionelle Schneiderei Arbeitsplatz"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
         quality={85}

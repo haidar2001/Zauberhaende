@@ -3,7 +3,8 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Datenschutz - Zauberhände Änderungsschneiderei",
+  title: "Datenschutz",
+  alternates: { canonical: "/datenschutz" },
   description: "Datenschutzerklärung der Zauberhände Änderungsschneiderei in Alfter",
 }
 

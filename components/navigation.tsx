@@ -12,7 +12,7 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { href: "/startseite", label: "Startseite" },
+    { href: "/", label: "Startseite" },
     { href: "/leistungen", label: "Leistungen" },
     { href: "/galerie", label: "Galerie" },
     { href: "/kontakt", label: "Kontakt" },
@@ -22,7 +22,7 @@ export function Navigation() {
     <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 animate-in slide-in-from-top duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/startseite" className="flex items-center space-x-2 group">
+          <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative group-hover:scale-110 transition-transform duration-200">
               <Image
                 src="/images/logo.webp"
@@ -89,7 +89,7 @@ export function Navigation() {
               ))}
               <div className="px-3 py-2">
                 <Button size="sm" className="w-full hover:scale-105 transition-transform duration-200">
-                  <a href="tel:+4922819999999">Anrufen</a>
+                  <a href="tel:+49222262779">Anrufen</a>
                 </Button>
               </div>
             </div>
