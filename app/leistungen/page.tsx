@@ -287,6 +287,7 @@ export default function LeistungenPage() {
               size="lg"
               variant="secondary"
               className="text-base px-8 hover:scale-105 transition-transform duration-200"
+              asChild
             >
               <a href="tel:+49222262779" className="flex items-center">
                 Jetzt anrufen

@@ -19,7 +19,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="relative min-h-screen w-full overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden bg-black">
         <ProgressiveHeroMedia />
 
         {/* Gradient Overlay - Dark on left (desktop) or bottom (mobile), fading to transparent */}
@@ -31,13 +31,13 @@ export default function HomePage() {
             <div className="max-w-xl lg:max-w-2xl">
               <header>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
-                  <span className="text-accent font-semibold">Zauberhände</span>
+                  <span className="text-[#c89b3c] font-semibold">Zauberhände</span>
                   <br />
                   Änderungsschneiderei in Alfter bei Bonn & Bornheim
                 </h1>
               </header>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button size="lg" className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button asChild size="lg" className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
                   <a href="tel:+49222262779" className="flex items-center">
                     Jetzt anrufen
                     <ArrowRight className="ml-2 h-4 w-4" />

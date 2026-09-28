@@ -63,6 +63,7 @@ export function CookieBanner() {
               variant="ghost"
               size="sm"
               onClick={declineCookies}
+              aria-label="Cookie-Hinweis schließen"
               className="p-1 h-8 w-8 text-gray-400 hover:text-gray-600"
             >
               <X className="h-4 w-4" />

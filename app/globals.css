@@ -17,7 +17,7 @@
   --secondary-foreground: #333333;
   --muted: #f7f5f1; /* Light beige for muted elements */
   --muted-foreground: #666666; /* Medium gray */
-  --accent: #c89b3c; /* Gold/ochre for accents and highlights */
+  --accent: #86651b; /* Gold/ochre for accents and highlights (dunkler für Kontrast ≥ 4.5:1 auf Weiß) */
   --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
