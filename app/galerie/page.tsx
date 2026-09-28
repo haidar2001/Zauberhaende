@@ -96,7 +96,7 @@ export default function GaleriePage() {
                 Möchten Sie auch perfekt sitzende Kleidung?
               </h2>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Vereinbaren Sie einen Termin für eine kostenlose Beratung. Wir beraten Sie gerne zu allen
+                Kommen Sie ohne Termin vorbei – wir beraten Sie kostenlos zu allen
                 Änderungswünschen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { services } from "@/lib/services"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zh-alfter.de"
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...services.map((service) => ({
+      url: `${baseUrl}/leistungen/${service.slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/kontakt`,
       lastModified: lastUpdated,
