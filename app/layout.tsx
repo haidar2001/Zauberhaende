@@ -132,7 +132,6 @@ export default function RootLayout({
               },
             ],
               priceRange: "€€",
-              paymentAccepted: "Cash, Credit Card, Debit Card",
               currenciesAccepted: "EUR",
               areaServed: [
                 {
