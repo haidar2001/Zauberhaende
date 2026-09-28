@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Änderungsschneiderei Alfter bei Bonn & Bornheim | Zauberhände" },
   alternates: { canonical: "/" },
   description:
-    "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim. Schneiderarbeiten, Hosen- & Kleideränderungen sowie Textilreinigung.",
+    "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosen kürzen, Kleider ändern, Reparaturen und Textilreinigung – schnell, präzise, mit Express-Service.",
 }
 
 export default function HomePage() {
