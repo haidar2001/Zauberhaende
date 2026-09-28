@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Scissors, Shirt, CheckCircle, ArrowRight, Zap, Shield, Sparkles } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { services } from "@/lib/services"
 
 export const metadata: Metadata = {
   title: "Leistungen – Änderungsschneiderei Alfter",
@@ -153,6 +154,20 @@ export default function LeistungenPage() {
                 <p className="text-sm text-muted-foreground">Persönliche Beratung vor Ort</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Detail Links */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-light text-foreground mb-6">Leistungen im Detail</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {services.map((service) => (
+              <Button key={service.slug} variant="outline" asChild>
+                <Link href={`/leistungen/${service.slug}`}>{service.name}</Link>
+              </Button>
+            ))}
           </div>
         </div>
       </section>

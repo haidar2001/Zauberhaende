@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { locations } from "@/lib/locations"
 import Image from "next/image"
 import { MapPin, Phone, Mail } from "lucide-react"
 
@@ -114,7 +115,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center animate-in fade-in slide-in-from-bottom duration-500 delay-600">
+        <nav aria-label="Einzugsgebiet" className="border-t border-primary-foreground/20 mt-8 pt-6 text-sm text-primary-foreground/70">
+          <span className="mr-2">Änderungsschneiderei in Alfter für:</span>
+          {locations.map((location, index) => (
+            <span key={location.slug}>
+              {index > 0 && " · "}
+              <Link href={`/${location.slug}`} className="hover:text-primary-foreground transition-colors">
+                {location.city}
+              </Link>
+            </span>
+          ))}
+        </nav>
+
+        <div className="border-t border-primary-foreground/20 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center animate-in fade-in slide-in-from-bottom duration-500 delay-600">
           <p className="text-primary-foreground/60 text-sm">
             © 2025 Zauberhände Änderungsschneiderei. Alle Rechte vorbehalten.
           </p>

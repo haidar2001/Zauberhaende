@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Kontakt & Öffnungszeiten – Änderungsschneiderei Alfter",
   alternates: { canonical: "/kontakt" },
   description:
-    "Kontaktieren Sie Zauberhände für Terminvereinbarungen und Beratung. Holzgasse 13a, 53347 Alfter. Tel: 02222 62779. Öffnungszeiten Mo-Sa.",
+    "Zauberhände Änderungsschneiderei in Alfter – ohne Termin vorbeikommen. Holzgasse 13a, 53347 Alfter. Tel: 02222 62779. Öffnungszeiten Mo-Sa.",
 }
 
 export default function KontaktPage() {
@@ -68,8 +68,8 @@ export default function KontaktPage() {
               Kontakt & Beratung
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty">
-              Haben Sie Fragen oder möchten einen Termin vereinbaren? Rufen Sie uns an oder besuchen Sie uns direkt in
-              unserem Geschäft in Alfter.
+              Haben Sie Fragen? Rufen Sie uns an oder besuchen Sie uns direkt in unserem Geschäft in Alfter – ganz
+              ohne Termin.
             </p>
           </div>
         </div>
