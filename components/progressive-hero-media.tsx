@@ -10,7 +10,7 @@ export function ProgressiveHeroMedia() {
         sizes="100vw"
         className="object-cover"
         priority
-        quality={85}
+        quality={70}
       />
     </div>
   );

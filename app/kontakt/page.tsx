@@ -64,10 +64,10 @@ export default function KontaktPage() {
       <section className="py-16 lg:py-24 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6 text-balance animate-in fade-in slide-in-from-bottom duration-500">
+            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6 text-balance">
               Kontakt & Beratung
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty">
               Haben Sie Fragen oder möchten einen Termin vereinbaren? Rufen Sie uns an oder besuchen Sie uns direkt in
               unserem Geschäft in Alfter.
             </p>

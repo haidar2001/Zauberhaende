@@ -121,10 +121,10 @@ export default function LeistungenPage() {
       <section className="py-16 lg:py-24 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6 text-balance animate-in fade-in slide-in-from-bottom duration-500">
+            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6 text-balance">
               Unsere Leistungen
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty">
               Von präzisen Änderungen bis zur schonenden Textilpflege - bei Zauberhände in Alfter bei Bonn & Bornheim erhalten Sie alles rund um gepflegte Kleidung. Wir bieten fachgerechte Anpassungen, 
               Lederänderungen und eine zuverlässige Reinigungsannahme mit Erfahrung und Feingefühl.
             </p>
