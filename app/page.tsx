@@ -82,7 +82,9 @@ export default function HomePage() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                    <span className="text-muted-foreground">Hosenkürzen & Säumen</span>
+                    <Link href="/leistungen/hosen-kuerzen" className="text-muted-foreground hover:text-accent hover:underline">
+                      Hosenkürzen & Säumen
+                    </Link>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
@@ -109,11 +111,15 @@ export default function HomePage() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                    <span className="text-muted-foreground">Textilreinigung</span>
+                    <Link href="/leistungen/textilreinigung" className="text-muted-foreground hover:text-accent hover:underline">
+                      Textilreinigung
+                    </Link>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                    <span className="text-muted-foreground">Lederreinigung</span>
+                    <Link href="/leistungen/leder-aenderungen" className="text-muted-foreground hover:text-accent hover:underline">
+                      Lederreinigung
+                    </Link>
                   </div>
                 </div>
               </CardContent>

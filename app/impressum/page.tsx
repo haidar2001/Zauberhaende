@@ -19,7 +19,7 @@ export default function ImpressumPage() {
 
           <div className="bg-card rounded-lg shadow-sm p-8 space-y-8">
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Angaben gemäß § 5 DDG</h2>
               <div className="text-muted-foreground space-y-2">
                 <p className="font-medium text-foreground">Zauberhände Änderungsschneiderei</p>
                 <p>Inhaberin: Mohamad Haidar</p>
@@ -80,8 +80,8 @@ export default function ImpressumPage() {
               <h2 className="text-2xl font-semibold text-foreground mb-4">Haftung für Inhalte</h2>
               <div className="text-muted-foreground space-y-3">
                 <p>
-                  Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
-                  allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
+                  Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den
+                  allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht
                   unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
                   Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
                 </p>

@@ -5,7 +5,7 @@ export function ProgressiveHeroMedia() {
     <div className="absolute inset-0">
       <Image
         src="/alfter-video-thumbnail.webp"
-        alt="Professionelle Schneiderei Arbeitsplatz"
+        alt="Ladenfront der Zauberhände Änderungsschneiderei in der Holzgasse 13a in Alfter"
         fill
         sizes="100vw"
         className="object-cover"
