@@ -30,6 +30,7 @@ export function Navigation() {
                 width={40}
                 height={40}
                 className="object-contain rounded-sm"
+                loading="eager"
                 quality={90}
               />
             </div>
