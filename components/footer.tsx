@@ -63,7 +63,7 @@ export function Footer() {
           </div>
 
           <div className="animate-in fade-in slide-in-from-bottom duration-500 delay-200">
-            <h3 className="font-semibold text-lg mb-4">Kontakt</h3>
+            <p className="font-semibold text-lg mb-4">Kontakt</p>
             <div className="space-y-3">
               <div className="flex items-start space-x-3 group">
                 <MapPin className="h-4 w-4 text-accent mt-1 group-hover:scale-110 transition-transform duration-200" />
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
 
           <div className="animate-in fade-in slide-in-from-bottom duration-500 delay-400">
-            <h3 className="font-semibold text-lg mb-4">Öffnungszeiten</h3>
+            <p className="font-semibold text-lg mb-4">Öffnungszeiten</p>
             <div className="space-y-3 text-primary-foreground/80">
               <div>
                 <p className="font-medium">Mo, Di, Do, Fr:</p>

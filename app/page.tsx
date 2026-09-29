@@ -11,7 +11,7 @@ import { appointmentFaq, expressFaq, priceFaq } from "@/lib/services"
 
 const title = "Änderungsschneiderei in Alfter bei Bonn & Bornheim"
 const description =
-  "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosen kürzen, Kleider ändern, Reparaturen und Reinigungsannahme – ohne Termin, mit Express-Service."
+  "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosen kürzen, Kleider ändern, Reparaturen, Reinigungsannahme – ohne Termin, Express möglich."
 
 const serviceOverview = [
   {
@@ -236,7 +236,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-bold text-white">1</span>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Beratung & Annahme</h3>
+                <p className="text-xl font-semibold text-foreground mb-4 text-center">Beratung & Annahme</p>
                 <p className="text-muted-foreground text-center leading-relaxed">
                   Kommen Sie ohne Termin in unser Geschäft in Alfter. Wir beraten Sie kostenlos, stecken bei Bedarf
                   direkt ab und nennen Ihnen den Preis vorab.
@@ -252,7 +252,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-bold text-white">2</span>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Professionelle Bearbeitung</h3>
+                <p className="text-xl font-semibold text-foreground mb-4 text-center">Professionelle Bearbeitung</p>
                 <p className="text-muted-foreground text-center leading-relaxed">
                   Unsere erfahrenen Schneider*innen kümmern sich mit höchster Sorgfalt um Ihre Textilien. Schnell,
                   präzise und mit Qualitätsgarantie.
@@ -268,7 +268,7 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-bold text-white">3</span>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Abholung & Freude</h3>
+                <p className="text-xl font-semibold text-foreground mb-4 text-center">Abholung & Freude</p>
                 <p className="text-muted-foreground text-center leading-relaxed">
                   Holen Sie Ihre perfekt angepassten oder gereinigten Textilien bei uns im Geschäft ab – zum
                   vereinbarten Termin, bei Express-Aufträgen oft schon am selben Tag.
@@ -322,7 +322,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
                 <Leaf className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Nachhaltige Textilreparatur</h3>
+              <p className="text-xl font-semibold text-foreground mb-4">Nachhaltige Textilreparatur</p>
               <p className="text-muted-foreground">
                 Wir verlängern die Lebensdauer Ihrer Kleidung durch fachgerechte Änderungen und Reparaturen -
                 ressourcenschonend und umweltfreundlich.
@@ -333,7 +333,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
                 <Clock className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Schneller Service</h3>
+              <p className="text-xl font-semibold text-foreground mb-4">Schneller Service</p>
               <p className="text-muted-foreground">
                 Kurze Bearbeitungszeiten ohne Kompromisse bei der Qualität. Express-Service für eilige Aufträge
                 verfügbar.
@@ -344,7 +344,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Qualitätsgarantie</h3>
+              <p className="text-xl font-semibold text-foreground mb-4">Qualitätsgarantie</p>
               <p className="text-muted-foreground">
                 Höchste Qualitätsstandards und persönliche Beratung für optimale Ergebnisse bei jedem Auftrag.
               </p>
@@ -377,11 +377,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">
+                <p className="text-lg font-semibold text-accent mb-2">
                   <Link href="/aenderungsschneiderei-alfter" className="hover:underline">
                     Alfter
                   </Link>
-                </h3>
+                </p>
                 <p className="text-sm text-muted-foreground">
                   Unser Hauptstandort - mitten im
                   <br />
@@ -395,11 +395,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Train className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">
+                <p className="text-lg font-semibold text-accent mb-2">
                   <Link href="/aenderungsschneiderei-bonn" className="hover:underline">
                     Bonn
                   </Link>
-                </h3>
+                </p>
                 <p className="text-sm text-muted-foreground">
                   Nur 14 Minuten mit öffentlichen
                   <br />
@@ -413,11 +413,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">
+                <p className="text-lg font-semibold text-accent mb-2">
                   <Link href="/aenderungsschneiderei-bornheim" className="hover:underline">
                     Bornheim
                   </Link>
-                </h3>
+                </p>
                 <p className="text-sm text-muted-foreground">
                   Etwa 10 Minuten Fahrtzeit - gute
                   <br />
@@ -431,11 +431,11 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-accent mb-2">
+                <p className="text-lg font-semibold text-accent mb-2">
                   <Link href="/aenderungsschneiderei-wesseling" className="hover:underline">
                     Wesseling
                   </Link>
-                </h3>
+                </p>
                 <p className="text-sm text-muted-foreground">Nur 20 Minuten mit dem Auto</p>
               </CardContent>
             </Card>
