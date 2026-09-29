@@ -11,7 +11,7 @@ import { MAPS_URL } from "@/lib/business"
 
 export const metadata: Metadata = {
   title: {
-    default: "Änderungsschneiderei Bonn & Bornheim - Zauberhände Schneiderei Alfter",
+    default: "Zauberhände – Änderungsschneiderei in Alfter bei Bonn & Bornheim",
     template: "%s | Zauberhände",
   },
   description:
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://zh-alfter.de"),
   openGraph: {
-    title: "Änderungsschneiderei Bonn & Bornheim - Zauberhände Schneiderei Alfter",
+    title: "Zauberhände – Änderungsschneiderei in Alfter bei Bonn & Bornheim",
     description:
       "Professionelle Änderungsschneiderei & Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Min. von Bonn, 10 Min. von Bornheim. Hosen kürzen, Kleider ändern und Reinigungsannahme – ohne Termin.",
     siteName: "Zauberhände",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Änderungsschneiderei Bonn & Bornheim - Zauberhände Alfter",
+    title: "Zauberhände – Änderungsschneiderei in Alfter bei Bonn & Bornheim",
     description:
       "Professionelle Schneiderei & Textilreinigung in Alfter bei Bonn & Bornheim. Hosenkürzen, Änderungen & Reinigung.",
     images: ["/og-image.jpg"],
@@ -70,6 +70,21 @@ export default function RootLayout({
   return (
     <html lang="de" className="scroll-smooth">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://zh-alfter.de/#website",
+              url: "https://zh-alfter.de",
+              name: "Zauberhände",
+              alternateName: ["Zauberhände Änderungsschneiderei", "zh-alfter.de"],
+              inLanguage: "de-DE",
+              publisher: { "@id": "https://zh-alfter.de/#business" },
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

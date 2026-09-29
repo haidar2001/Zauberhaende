@@ -20,7 +20,7 @@ export interface ServicePage {
   faqs: ServiceFaq[]
 }
 
-const priceFaq: ServiceFaq = {
+export const priceFaq: ServiceFaq = {
   question: "Was kostet das?",
   answer:
     "Feste Preise gibt es bei uns nicht – der Preis richtet sich nach Aufwand und Material. Kommen Sie einfach vorbei, wir schauen uns Ihr Kleidungsstück an und nennen Ihnen den Preis direkt vor Ort, bevor wir mit der Arbeit beginnen.",

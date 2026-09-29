@@ -6,17 +6,95 @@ import { Clock, ArrowRight, CheckCircle, MapPin, Car, Train, Scissors, Shirt, Le
 import Link from "next/link"
 import type { Metadata } from "next"
 import { ProgressiveHeroMedia } from "@/components/progressive-hero-media"
+import { FaqSection } from "@/components/faq-section"
+import { appointmentFaq, expressFaq, priceFaq } from "@/lib/services"
+
+const title = "Änderungsschneiderei in Alfter bei Bonn & Bornheim"
+const description =
+  "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosen kürzen, Kleider ändern, Reparaturen und Reinigungsannahme – ohne Termin, mit Express-Service."
+
+const serviceOverview = [
+  {
+    slug: "hosen-kuerzen",
+    name: "Hosen kürzen",
+    text: "Jeans, Anzug- und Stoffhosen auf die richtige Länge – wir stecken direkt bei Ihnen ab, am besten mit den passenden Schuhen.",
+  },
+  {
+    slug: "brautkleid-aendern",
+    name: "Brautkleid ändern",
+    text: "Brautkleider, Abendkleider und festliche Mode anpassen – mit persönlicher Anprobe und kostenloser Beratung.",
+  },
+  {
+    slug: "reissverschluss-ersetzen",
+    name: "Reißverschluss ersetzen",
+    text: "Neue Reißverschlüsse für Jacken, Hosen und Kleider, dazu Reparaturen an Futter, Rissen und Löchern.",
+  },
+  {
+    slug: "leder-aenderungen",
+    name: "Leder-Änderungen",
+    text: "Lederjacken kürzen, enger machen und reparieren – und Leder oder Wildleder zur Reinigung abgeben.",
+  },
+  {
+    slug: "textilreinigung",
+    name: "Textilreinigung",
+    text: "Reinigungsannahme für Anzüge, Kleider, Hemden, Leder und Brautkleider – gereinigt von unserer Partner-Fachreinigung.",
+  },
+]
+
+const homeFaqs = [
+  appointmentFaq,
+  priceFaq,
+  expressFaq,
+  {
+    question: "Ändern Sie auch Gardinen und Heimtextilien?",
+    answer:
+      "Ja, wir bearbeiten nicht nur Kleidung, sondern auch Heimtextilien wie Gardinen, Vorhänge, Tischdecken oder Bettwäsche. Sprechen Sie uns einfach mit Ihrem Anliegen an.",
+  },
+  {
+    question: "Reinigen Sie die Kleidung selbst?",
+    answer:
+      "Nein, wir sind eine Reinigungsannahme: Wir nehmen Ihre Kleidung an und geben sie an unsere Partner-Fachreinigung weiter. Abgabe und Abholung erfolgen bei uns im Geschäft.",
+  },
+  {
+    question: "Wie weit ist es aus Bonn und Bornheim?",
+    answer:
+      "Aus Bonn sind Sie mit öffentlichen Verkehrsmitteln in rund 14 Minuten bei uns, aus Bornheim in etwa 10 Minuten. Mit dem Auto parken Sie direkt vor dem Geschäft in der Holzgasse 13a.",
+  },
+]
 
 export const metadata: Metadata = {
-  title: { absolute: "Änderungsschneiderei Alfter bei Bonn & Bornheim | Zauberhände" },
+  title: { absolute: title },
   alternates: { canonical: "/" },
-  description:
-    "Ihre Änderungsschneiderei in Alfter bei Bonn & Bornheim: Hosen kürzen, Kleider ändern, Reparaturen und Textilreinigung – schnell, präzise, mit Express-Service.",
+  description,
+  openGraph: {
+    title: `${title} | Zauberhände`,
+    description,
+    url: "https://zh-alfter.de",
+    siteName: "Zauberhände",
+    locale: "de_DE",
+    type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title: `${title} | Zauberhände`, description, images: ["/og-image.jpg"] },
 }
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: homeFaqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          }),
+        }}
+      />
       <Navigation />
 
       <section className="relative min-h-screen w-full overflow-hidden bg-black">
@@ -31,7 +109,7 @@ export default function HomePage() {
             <div className="max-w-xl lg:max-w-2xl">
               <header>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
-                  <span className="text-[#c89b3c] font-semibold">Zauberhände</span>
+                  <span className="text-[#c89b3c] font-semibold">Zauberhände</span>{" "}
                   <br />
                   Änderungsschneiderei in Alfter bei Bonn & Bornheim
                 </h1>
@@ -377,6 +455,34 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">Alle Leistungen im Überblick</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Von der Hose bis zum Brautkleid: Diese Arbeiten erledigen wir in unserer Schneiderei in Alfter. Den Preis
+              nennen wir Ihnen vorab, nachdem wir Ihr Kleidungsstück gesehen haben.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceOverview.map((service) => (
+              <Card key={service.slug} className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <Link href={`/leistungen/${service.slug}`} className="hover:text-accent hover:underline">
+                      {service.name}
+                    </Link>
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{service.text}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <FaqSection faqs={homeFaqs} />
 
       <Footer />
     </div>
