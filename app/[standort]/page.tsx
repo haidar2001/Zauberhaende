@@ -41,14 +41,25 @@ export default function LocationPage({ params }: { params: { standort: string } 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Startseite", item: baseUrl },
-              { "@type": "ListItem", position: 2, name: `Änderungsschneiderei ${location.city}`, item: url },
-            ],
-          }),
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Startseite", item: baseUrl },
+                { "@type": "ListItem", position: 2, name: `Änderungsschneiderei ${location.city}`, item: url },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: location.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ]),
         }}
       />
 
@@ -113,6 +124,17 @@ export default function LocationPage({ params }: { params: { standort: string } 
           </div>
         </section>
 
+        <section className="pb-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            {location.sections.map((section) => (
+              <div key={section.heading}>
+                <h2 className="text-2xl md:text-3xl font-light text-foreground mb-4">{section.heading}</h2>
+                <p className="text-muted-foreground leading-relaxed">{section.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="py-16 bg-secondary/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-light text-foreground mb-4">
@@ -142,6 +164,16 @@ export default function LocationPage({ params }: { params: { standort: string } 
                 </li>
               ))}
             </ul>
+
+            <h2 className="text-2xl font-light text-foreground mb-6">Häufige Fragen aus {location.city}</h2>
+            <div className="space-y-6 mb-12">
+              {location.faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
 
             <h2 className="text-2xl font-light text-foreground mb-4">Auch gut erreichbar aus</h2>
             <div className="flex flex-wrap gap-3">

@@ -14,6 +14,9 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [{ source: "/startseite", destination: "/", permanent: true }]
+  },
 }
 
 export default nextConfig

@@ -125,6 +125,24 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
+        <section className="pb-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            {service.sections.map((section) => (
+              <div key={section.heading}>
+                <h2 className="text-2xl md:text-3xl font-light text-foreground mb-4">{section.heading}</h2>
+                <p className="text-muted-foreground leading-relaxed">{section.text}</p>
+              </div>
+            ))}
+            <p className="text-muted-foreground">
+              Beispiele unserer Arbeit finden Sie in der{" "}
+              <Link href="/galerie" className="text-accent font-medium hover:underline">
+                Galerie mit Vorher/Nachher-Bildern
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
+
         <section className="py-16 bg-secondary/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-light text-foreground mb-8">Häufige Fragen</h2>

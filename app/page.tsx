@@ -160,8 +160,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Beratung & Annahme</h3>
                 <p className="text-muted-foreground text-center leading-relaxed">
-                  Besuchen Sie uns in Alfter oder nutzen Sie unseren Abholservice. Wir beraten Sie kostenlos und
-                  erstellen ein transparentes Angebot.
+                  Kommen Sie ohne Termin in unser Geschäft in Alfter. Wir beraten Sie kostenlos, stecken bei Bedarf
+                  direkt ab und nennen Ihnen den Preis vorab.
                 </p>
               </div>
               <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
@@ -192,8 +192,8 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4 text-center">Abholung & Freude</h3>
                 <p className="text-muted-foreground text-center leading-relaxed">
-                  Holen Sie Ihre perfekt angepassten oder gereinigten Textilien ab. Auf Wunsch liefern wir auch direkt
-                  zu Ihnen nach Hause.
+                  Holen Sie Ihre perfekt angepassten oder gereinigten Textilien bei uns im Geschäft ab – zum
+                  vereinbarten Termin, bei Express-Aufträgen oft schon am selben Tag.
                 </p>
               </div>
             </article>
