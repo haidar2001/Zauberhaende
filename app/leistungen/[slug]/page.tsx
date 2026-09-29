@@ -7,6 +7,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getService, services } from "@/lib/services"
+import { FaqSection } from "@/components/faq-section"
 
 const baseUrl = "https://zh-alfter.de"
 
@@ -143,19 +144,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        <section className="py-16 bg-secondary/20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-light text-foreground mb-8">Häufige Fragen</h2>
-            <div className="space-y-6">
-              {service.faqs.map((faq) => (
-                <div key={faq.question}>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={service.faqs} subtitle={`Die wichtigsten Antworten rund um „${service.name}“`} />
 
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

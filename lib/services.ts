@@ -199,6 +199,11 @@ export const services: ServicePage[] = [
         answer:
           "Ja. Sprechen Sie uns bei der Abgabe einfach darauf an, dann planen wir Änderung und Reinigung gemeinsam.",
       },
+      {
+        question: "Wie lange dauert eine Leder-Änderung?",
+        answer:
+          "Das hängt von der Art der Änderung und der Verarbeitung der Jacke ab. Bei der Annahme sagen wir Ihnen, wann Sie Ihr Stück wieder abholen können.",
+      },
     ],
   },
   {
@@ -237,6 +242,11 @@ export const services: ServicePage[] = [
         question: "Reinigen Sie die Kleidung selbst?",
         answer:
           "Nein, wir sind eine Reinigungsannahme: Wir nehmen Ihre Kleidung an und geben sie an unsere Partner-Fachreinigung weiter. Abgabe und Abholung erfolgen bei uns im Geschäft in Alfter.",
+      },
+      {
+        question: "Wann kann ich meine Kleidung wieder abholen?",
+        answer:
+          "Bei der Abgabe nennen wir Ihnen den Abholtermin. Sie holen Ihre gereinigte Kleidung dann während unserer Öffnungszeiten bei uns im Geschäft ab.",
       },
     ],
   },
