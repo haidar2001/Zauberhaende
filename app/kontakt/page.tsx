@@ -4,12 +4,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import type { Metadata } from "next"
 import { MAPS_URL } from "@/lib/business"
+import Link from "next/link"
+
+const title = "Kontakt & Öffnungszeiten – Schneiderei Alfter bei Bonn"
+const description =
+  "Zauberhände, Holzgasse 13a in Alfter – nur 14 Min. von Bonn. Tel. 02222 62779. Mo–Sa ab 10 Uhr, Mo/Di/Do/Fr bis 18 Uhr. Ohne Termin vorbeikommen."
 
 export const metadata: Metadata = {
-  title: "Kontakt & Öffnungszeiten – Änderungsschneiderei Alfter",
+  title: { absolute: title },
   alternates: { canonical: "/kontakt" },
-  description:
-    "Zauberhände Änderungsschneiderei in Alfter – ohne Termin vorbeikommen. Holzgasse 13a, 53347 Alfter. Tel: 02222 62779. Öffnungszeiten Mo-Sa.",
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://zh-alfter.de/kontakt",
+    siteName: "Zauberhände",
+    locale: "de_DE",
+    type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: ["/og-image.jpg"] },
 }
 
 export default function KontaktPage() {
@@ -18,7 +32,26 @@ export default function KontaktPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "@id": "https://zh-alfter.de/kontakt#webpage",
+              url: "https://zh-alfter.de/kontakt",
+              name: title,
+              inLanguage: "de-DE",
+              about: { "@id": "https://zh-alfter.de/#business" },
+              mainEntity: { "@id": "https://zh-alfter.de/#business" },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Startseite", item: "https://zh-alfter.de" },
+                { "@type": "ListItem", position: 2, name: "Kontakt", item: "https://zh-alfter.de/kontakt" },
+              ],
+            },
+            {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
@@ -55,7 +88,8 @@ export default function KontaktPage() {
                 },
               },
             ],
-          }),
+            },
+          ]),
         }}
       />
 
@@ -66,11 +100,11 @@ export default function KontaktPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-light text-foreground mb-6 text-balance">
-              Kontakt & Beratung
+              Kontakt & Anfahrt – Änderungsschneiderei in Alfter bei Bonn
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty">
               Haben Sie Fragen? Rufen Sie uns an oder besuchen Sie uns direkt in unserem Geschäft in Alfter – ganz
-              ohne Termin.
+              ohne Termin. Aus Bonn sind Sie in rund 14 Minuten bei uns.
             </p>
           </div>
         </div>
@@ -86,7 +120,7 @@ export default function KontaktPage() {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors group-hover:rotate-12 duration-300">
                   <MapPin className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Unser Standort</h3>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Unser Standort</h2>
                 <div className="text-muted-foreground space-y-1">
                   <p className="font-semibold text-accent">Zauberhände Änderungsschneiderei</p>
                   <p>Holzgasse 13a</p>
@@ -114,12 +148,12 @@ export default function KontaktPage() {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors group-hover:rotate-12 duration-300">
                   <Phone className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Kontaktdaten</h3>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Kontaktdaten</h2>
                 <div className="text-muted-foreground space-y-3">
                   <div className="flex items-center justify-center space-x-2">
                     <Phone className="h-4 w-4" />
                     <a href="tel:+49222262779" className="hover:text-accent transition-colors">
-                      +492222 62779
+                      02222 62779
                     </a>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
@@ -139,7 +173,7 @@ export default function KontaktPage() {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors group-hover:rotate-12 duration-300">
                   <Clock className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Öffnungszeiten</h3>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Öffnungszeiten</h2>
                 <div className="text-muted-foreground space-y-2">
                   <div className="flex justify-between">
                     <span>Mo, Di, Do, Fr:</span>
@@ -170,52 +204,64 @@ export default function KontaktPage() {
           <div className="max-w-4xl mx-auto">
             <Card className="animate-in fade-in slide-in-from-bottom duration-500 delay-600">
               <CardHeader>
-                <CardTitle className="text-center text-2xl">Gut erreichbar - auch aus der Umgebung</CardTitle>
+                <CardTitle className="text-center text-2xl">
+                  <h2>Anfahrt aus Bonn, Bornheim & Umgebung</h2>
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-center mb-8">
                   <p className="text-muted-foreground text-lg mb-4">
-                    Unsere Änderungsschneiderei in <strong>Alfter</strong> ist zentral gelegen und damit der ideale
-                    Anlaufpunkt für Kund*innen aus der gesamten Region.
+                    Unsere Änderungsschneiderei liegt in der Holzgasse 13a in <strong>Alfter</strong> – direkt an der
+                    Stadtgrenze zu <strong>Bonn</strong>. Aus Duisdorf, Lengsdorf, Hardtberg oder Endenich sind Sie
+                    schnell bei uns, mit öffentlichen Verkehrsmitteln aus Bonn in rund 14 Minuten.
                   </p>
                   <p className="text-muted-foreground">
-                    Ob mit <strong>Bus, Bahn oder Auto</strong> – dank unserer verkehrsgünstigen Lage erreichen Sie uns
-                    schnell und bequem.
+                    Mit dem Auto parken Sie direkt vor dem Geschäft – ohne Parkplatzsuche in der Bonner Innenstadt. Ihre
+                    Route planen Sie am einfachsten über{" "}
+                    <a
+                      href={MAPS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent font-medium hover:underline"
+                    >
+                      Google Maps
+                    </a>
+                    .
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200">
-                    <h4 className="font-semibold text-accent mb-2">Alfter</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Unser Hauptstandort - mitten im
-                      <br />
-                      Zentrum
-                    </p>
-                  </div>
+                  <Link
+                    href="/aenderungsschneiderei-bonn"
+                    className="block text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200"
+                  >
+                    <h3 className="font-semibold text-accent mb-2">Bonn</h3>
+                    <p className="text-sm text-muted-foreground">Rund 14 Minuten mit Bus und Bahn</p>
+                  </Link>
 
-                  <div className="text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200">
-                    <h4 className="font-semibold text-accent mb-2">Bonn Duisdorf</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Nur 14 Minuten mit öffentlichen
-                      <br />
-                      Verkehrsmitteln
-                    </p>
-                  </div>
+                  <Link
+                    href="/aenderungsschneiderei-alfter"
+                    className="block text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200"
+                  >
+                    <h3 className="font-semibold text-accent mb-2">Alfter</h3>
+                    <p className="text-sm text-muted-foreground">Unser Geschäft – zentral im Ort</p>
+                  </Link>
 
-                  <div className="text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200">
-                    <h4 className="font-semibold text-accent mb-2">Bornheim</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Etwa 10 Minuten Fahrtzeit - gute
-                      <br />
-                      Busverbindung
-                    </p>
-                  </div>
+                  <Link
+                    href="/aenderungsschneiderei-bornheim"
+                    className="block text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200"
+                  >
+                    <h3 className="font-semibold text-accent mb-2">Bornheim</h3>
+                    <p className="text-sm text-muted-foreground">Etwa 10 Minuten, gute Busverbindung</p>
+                  </Link>
 
-                  <div className="text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200">
-                    <h4 className="font-semibold text-accent mb-2">Wesseling</h4>
-                    <p className="text-sm text-muted-foreground">Nur 20 Minuten mit dem Auto</p>
-                  </div>
+                  <Link
+                    href="/aenderungsschneiderei-wesseling"
+                    className="block text-center p-4 bg-secondary/20 rounded-lg hover:bg-secondary/30 transition-colors duration-200"
+                  >
+                    <h3 className="font-semibold text-accent mb-2">Wesseling</h3>
+                    <p className="text-sm text-muted-foreground">Etwa 20 Minuten mit dem Auto</p>
+                  </Link>
                 </div>
 
                 <div className="mt-8 text-center">
@@ -228,7 +274,7 @@ export default function KontaktPage() {
                       className="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200 hover:scale-105 transform"
                     >
                       <Phone className="h-4 w-4 mr-2" />
-                      +492222 62779
+                      02222 62779
                     </a>
                     <a
                       href="mailto:zauberhaende.alfter@gmail.com"
