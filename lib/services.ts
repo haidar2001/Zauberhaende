@@ -26,13 +26,13 @@ const priceFaq: ServiceFaq = {
     "Feste Preise gibt es bei uns nicht – der Preis richtet sich nach Aufwand und Material. Kommen Sie einfach vorbei, wir schauen uns Ihr Kleidungsstück an und nennen Ihnen den Preis direkt vor Ort, bevor wir mit der Arbeit beginnen.",
 }
 
-const appointmentFaq: ServiceFaq = {
+export const appointmentFaq: ServiceFaq = {
   question: "Brauche ich einen Termin?",
   answer:
     "Nein. Sie können während unserer Öffnungszeiten jederzeit ohne Termin in unser Geschäft in der Holzgasse 13a in Alfter kommen.",
 }
 
-const expressFaq: ServiceFaq = {
+export const expressFaq: ServiceFaq = {
   question: "Geht es auch schnell?",
   answer:
     "Ja, für eilige Aufträge bieten wir einen Express-Service an. Je nach Aufwand können Änderungen sogar noch am selben Tag fertig werden. Sagen Sie uns bei der Abgabe einfach, bis wann Sie das Stück brauchen.",

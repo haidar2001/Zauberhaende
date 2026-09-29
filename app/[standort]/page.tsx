@@ -7,7 +7,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getLocation, locations } from "@/lib/locations"
-import { services } from "@/lib/services"
+import { appointmentFaq, expressFaq, services } from "@/lib/services"
+import { FaqSection } from "@/components/faq-section"
 import { MAPS_URL } from "@/lib/business"
 
 const baseUrl = "https://zh-alfter.de"
@@ -35,6 +36,7 @@ export default function LocationPage({ params }: { params: { standort: string } 
 
   const url = `${baseUrl}/${location.slug}`
   const otherLocations = locations.filter((l) => l.slug !== location.slug)
+  const faqs = [...location.faqs, appointmentFaq, expressFaq]
 
   return (
     <div className="min-h-screen bg-background">
@@ -53,7 +55,7 @@ export default function LocationPage({ params }: { params: { standort: string } 
             {
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              mainEntity: location.faqs.map((faq) => ({
+              mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,
                 acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -165,16 +167,6 @@ export default function LocationPage({ params }: { params: { standort: string } 
               ))}
             </ul>
 
-            <h2 className="text-2xl font-light text-foreground mb-6">Häufige Fragen aus {location.city}</h2>
-            <div className="space-y-6 mb-12">
-              {location.faqs.map((faq) => (
-                <div key={faq.question}>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-
             <h2 className="text-2xl font-light text-foreground mb-4">Auch gut erreichbar aus</h2>
             <div className="flex flex-wrap gap-3">
               {otherLocations.map((l) => (
@@ -185,6 +177,8 @@ export default function LocationPage({ params }: { params: { standort: string } 
             </div>
           </div>
         </section>
+
+        <FaqSection faqs={faqs} subtitle={`Die wichtigsten Antworten für Kundinnen und Kunden aus ${location.city}`} />
 
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
