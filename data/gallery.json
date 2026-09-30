@@ -1,5 +1,12 @@
 [
   {
+    "id": 5,
+    "type": "image",
+    "src": "/gallery/blaue-steppjacke-loch-reparatur-alfter-bonn.webp",
+    "title": "Loch in blauer Steppjacke repariert – Vorher/Nachher, Schneiderei Alfter",
+    "description": "Ein Loch an der Schulter einer blauen Steppjacke wurde in der Zauberhände Änderungsschneiderei in Alfter bei Bonn mit passendem Stoff sauber repariert."
+  },
+  {
     "id": 4,
     "type": "image",
     "src": "/gallery/steppjacke-riss-reparatur-alfter-bonn.webp",
