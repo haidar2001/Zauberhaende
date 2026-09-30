@@ -69,7 +69,7 @@ export const services: ServicePage[] = [
       },
       {
         heading: "Hose verlängern oder weiter machen – was ist möglich?",
-        text: "Kürzen und enger machen geht fast immer. Verlängern oder weiter machen ist dagegen nur manchmal möglich, und dann meist nur um wenige Zentimeter. Das hängt davon ab, wie viel Stoff im Saum oder in den Nähten eingeschlagen ist – und das ist bei jeder Hose anders. Bei manchen Hosen bleibt außerdem die alte Saum- oder Nahtkante leicht sichtbar. Bringen Sie die Hose einfach vorbei: Wir schauen uns die Nähte an und sagen Ihnen ehrlich, ob und wie viel möglich ist.",
+        text: "Kürzen können wir jede Hose – ganz nach Ihrem Wunsch. Verlängern oder weiter machen ist dagegen nur manchmal möglich, und dann meist nur um wenige Zentimeter. Das hängt davon ab, wie viel Stoff im Saum oder in den Nähten eingeschlagen ist – und das ist bei jeder Hose anders. Bei manchen Hosen bleibt außerdem die alte Saum- oder Nahtkante leicht sichtbar. Bringen Sie die Hose einfach vorbei: Wir schauen uns die Nähte an und sagen Ihnen ehrlich, ob und wie viel möglich ist.",
       },
     ],
     faqs: [
