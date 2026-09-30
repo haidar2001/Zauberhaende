@@ -157,6 +157,11 @@ export const services: ServicePage[] = [
         alt: "Vorher/Nachher: Loch im Ärmel einer Tommy Jeans Daunenjacke repariert – Zauberhände Änderungsschneiderei Alfter",
         caption: "Vorher/Nachher: Ein Loch am Ärmel einer Daunenjacke – mit passendem Stoff sauber verschlossen.",
       },
+      {
+        src: "/gallery/blaue-steppjacke-loch-reparatur-alfter-bonn.webp",
+        alt: "Vorher/Nachher: Loch in blauer Steppjacke repariert – Zauberhände Änderungsschneiderei Alfter",
+        caption: "Vorher/Nachher: Ein Loch an der Schulter einer Steppjacke – mit passendem Stoff sauber repariert.",
+      },
     ],
     name: "Reißverschluss ersetzen",
     title: "Reißverschluss ersetzen & Kleidung reparieren in Alfter",
