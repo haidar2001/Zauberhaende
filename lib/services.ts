@@ -8,6 +8,12 @@ export interface ServiceSection {
   text: string
 }
 
+export interface ServiceImage {
+  src: string
+  alt: string
+  caption: string
+}
+
 export interface ServicePage {
   slug: string
   name: string
@@ -18,6 +24,7 @@ export interface ServicePage {
   details: string[]
   sections: ServiceSection[]
   faqs: ServiceFaq[]
+  images?: ServiceImage[]
 }
 
 export const priceFaq: ServiceFaq = {
@@ -134,6 +141,13 @@ export const services: ServicePage[] = [
   },
   {
     slug: "reissverschluss-ersetzen",
+    images: [
+      {
+        src: "/gallery/Vorher-Nachher-Bild-schneiderei-bonn.webp",
+        alt: "Vorher/Nachher: Brandloch in Sweatjacke repariert – Zauberhände Änderungsschneiderei Alfter",
+        caption: "Vorher/Nachher: Ein Brandloch in einer Sweatjacke – nach der Reparatur kaum noch zu sehen.",
+      },
+    ],
     name: "Reißverschluss ersetzen",
     title: "Reißverschluss ersetzen & Kleidung reparieren in Alfter",
     description:
@@ -174,6 +188,14 @@ export const services: ServicePage[] = [
   },
   {
     slug: "leder-aenderungen",
+    images: [
+      {
+        src: "/gallery/wildleder-lammfelljacke-riss-reparatur-alfter-bonn.webp",
+        alt: "Vorher/Nachher: Riss in Wildleder-Lammfelljacke repariert – Zauberhände Änderungsschneiderei Alfter",
+        caption:
+          "Vorher/Nachher: Ein großer Riss an Ärmel und Rücken dieser Wildleder-Lammfelljacke – fachgerecht repariert in unserer Schneiderei in Alfter.",
+      },
+    ],
     name: "Leder-Änderungen",
     title: "Lederjacke ändern & reparieren in Alfter bei Bonn",
     description:

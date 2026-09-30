@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, CheckCircle, DoorOpen, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getService, services } from "@/lib/services"
@@ -47,6 +48,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               url,
               provider: { "@id": `${baseUrl}/#business` },
               areaServed: ["Alfter", "Bonn", "Bornheim", "Wesseling"],
+              ...(service.images && { image: service.images.map((image) => `${baseUrl}${image.src}`) }),
             },
             {
               "@context": "https://schema.org",
@@ -133,6 +135,19 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 <h2 className="text-2xl md:text-3xl font-light text-foreground mb-4">{section.heading}</h2>
                 <p className="text-muted-foreground leading-relaxed">{section.text}</p>
               </div>
+            ))}
+            {service.images?.map((image) => (
+              <figure key={image.src}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={1920}
+                  height={1440}
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  className="w-full h-auto rounded-lg border border-border"
+                />
+                <figcaption className="text-sm text-muted-foreground mt-2">{image.caption}</figcaption>
+              </figure>
             ))}
             <p className="text-muted-foreground">
               Beispiele unserer Arbeit finden Sie in der{" "}
