@@ -147,6 +147,16 @@ export const services: ServicePage[] = [
         alt: "Vorher/Nachher: Brandloch in Sweatjacke repariert – Zauberhände Änderungsschneiderei Alfter",
         caption: "Vorher/Nachher: Ein Brandloch in einer Sweatjacke – nach der Reparatur kaum noch zu sehen.",
       },
+      {
+        src: "/gallery/steppjacke-riss-reparatur-alfter-bonn.webp",
+        alt: "Vorher/Nachher: Großer Riss in schwarzer Steppjacke repariert – Zauberhände Änderungsschneiderei Alfter",
+        caption: "Vorher/Nachher: Ein großer Riss vorne an einer Steppjacke – repariert und wieder voll tragbar.",
+      },
+      {
+        src: "/gallery/Tommy-Jeans-Daunenjacke-Reparatur-Alfter-Bonn.webp",
+        alt: "Vorher/Nachher: Loch im Ärmel einer Tommy Jeans Daunenjacke repariert – Zauberhände Änderungsschneiderei Alfter",
+        caption: "Vorher/Nachher: Ein Loch am Ärmel einer Daunenjacke – mit passendem Stoff sauber verschlossen.",
+      },
     ],
     name: "Reißverschluss ersetzen",
     title: "Reißverschluss ersetzen & Kleidung reparieren in Alfter",
