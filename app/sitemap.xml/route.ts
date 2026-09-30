@@ -37,6 +37,7 @@ const entries: SitemapEntry[] = [
     path: `/leistungen/${service.slug}`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
+    images: service.images?.map((image) => image.src),
   })),
   { path: "/kontakt", changeFrequency: "monthly", priority: 0.7 },
   { path: "/galerie", changeFrequency: "monthly", priority: 0.7, images: galleryImages },
