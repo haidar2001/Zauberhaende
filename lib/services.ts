@@ -51,7 +51,8 @@ export const services: ServicePage[] = [
     details: [
       "Jeans kürzen",
       "Anzughosen und Stoffhosen kürzen",
-      "Bundweite enger oder weiter machen",
+      "Bundweite enger machen",
+      "Hose verlängern oder weiter machen – wenn genug Stoff vorhanden ist",
     ],
     sections: [
       {
@@ -66,11 +67,20 @@ export const services: ServicePage[] = [
         heading: "Mehrere Hosen auf einmal",
         text: "Gerade bei neu gekauften Hosen lohnt es sich, gleich alle auf einmal mitzubringen. Wir stecken jede Hose einzeln ab, damit jede zu den Schuhen passt, mit denen Sie sie tragen. Neben der Länge können wir bei Bedarf auch die Bundweite anpassen.",
       },
+      {
+        heading: "Hose verlängern oder weiter machen – was ist möglich?",
+        text: "Kürzen und enger machen geht fast immer. Verlängern oder weiter machen ist dagegen nur manchmal möglich, und dann meist nur um wenige Zentimeter. Das hängt davon ab, wie viel Stoff im Saum oder in den Nähten eingeschlagen ist – und das ist bei jeder Hose anders. Bei manchen Hosen bleibt außerdem die alte Saum- oder Nahtkante leicht sichtbar. Bringen Sie die Hose einfach vorbei: Wir schauen uns die Nähte an und sagen Ihnen ehrlich, ob und wie viel möglich ist.",
+      },
     ],
     faqs: [
       appointmentFaq,
       priceFaq,
       expressFaq,
+      {
+        question: "Kann man eine Hose verlängern oder weiter machen?",
+        answer:
+          "Manchmal, aber meist nur um wenige Zentimeter. Wie viel möglich ist, hängt davon ab, wie viel Stoff im Saum und in den Nähten vorhanden ist – das ist bei jeder Hose anders. Wir prüfen das kostenlos vor Ort, ohne Termin.",
+      },
       {
         question: "Soll ich die Hose mit den passenden Schuhen anprobieren?",
         answer:
