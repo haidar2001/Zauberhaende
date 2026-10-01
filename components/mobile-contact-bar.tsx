@@ -8,6 +8,7 @@ export function MobileContactBar() {
   return (
     <nav
       aria-label="Schnellkontakt"
+      data-track-position="Kontaktleiste Handy"
       className="md:hidden fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-primary-foreground/20 bg-primary text-primary-foreground shadow-[0_-4px_12px_rgba(0,0,0,0.15)] pb-[env(safe-area-inset-bottom)]"
     >
       {/* Anrufen ist die wichtigste Aktion und deshalb in der Akzentfarbe hervorgehoben */}
