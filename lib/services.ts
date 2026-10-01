@@ -302,7 +302,7 @@ export const services: ServicePage[] = [
     name: "Karnevalskostüme",
     title: "Karnevalskostüm ändern & reinigen in Alfter bei Bonn",
     description:
-      "Karnevalskostüm und Uniform ändern, kürzen, reparieren und reinigen lassen in Alfter bei Bonn & Bornheim. Früh bringen, entspannt feiern – ohne Termin.",
+      "Karnevalskostüm und Uniform ändern, kürzen, reparieren und reinigen lassen in Alfter bei Bonn & Bornheim. Für jedes Kostüm eine Lösung – ohne Termin.",
     h1: "Karnevalskostüm & Uniform ändern und reinigen in Alfter",
     intro:
       "Ob Gardeuniform, Funkenkostüm oder Kostüm für den Straßenkarneval: In unserer Änderungsschneiderei in Alfter passen wir Ihre Karnevalskleidung an, reparieren sie und nehmen sie nach der Session zur Reinigung an – für Jecken aus Alfter, Bonn, Bornheim und dem ganzen Vorgebirge.",
@@ -315,8 +315,8 @@ export const services: ServicePage[] = [
     ],
     sections: [
       {
-        heading: "Bringen Sie Ihr Kostüm früh genug",
-        text: "Vor dem 11.11. und in den Wochen vor Weiberfastnacht und Rosenmontag kommen viele Kostüme und Uniformen gleichzeitig zu uns. Je nach Aufwand braucht eine Änderung ihre Zeit – besonders bei aufwendigen Uniformen oder wenn mehrere Teile angepasst werden müssen. Bringen Sie Ihr Kostüm deshalb am besten einige Wochen vor dem Termin vorbei. So bleibt genug Zeit für die Änderung und eine Anprobe, und Sie können entspannt in die Session starten.",
+        heading: "Für jedes Kostüm eine Lösung",
+        text: "Bei uns in der Änderungsschneiderei finden wir für jedes Kostüm und jede Uniform eine Lösung. Vor dem 11.11. und vor Weiberfastnacht und Rosenmontag ist bei uns viel los – wer sein Kostüm etwas früher bringt, kann der Session ganz entspannt entgegensehen und hat noch Zeit für eine Anprobe. Kommen Sie einfach ohne Termin vorbei, wir schauen uns Ihr Kostüm gemeinsam mit Ihnen an.",
       },
       {
         heading: "Kostüme und Uniformen anpassen",
@@ -328,24 +328,24 @@ export const services: ServicePage[] = [
       },
       {
         heading: "Für Karnevalsvereine",
-        text: "Sie möchten mehrere Uniformen für Ihre Garde, Tanzgruppe oder Ihren Verein anpassen oder reinigen lassen? Sprechen Sie uns frühzeitig an, damit wir die Arbeiten gemeinsam planen können – am besten schon einige Wochen vor der Sessionseröffnung.",
+        text: "Sie möchten mehrere Uniformen für Ihre Garde, Tanzgruppe oder Ihren Verein anpassen oder reinigen lassen? Sprechen Sie uns gern an – gemeinsam planen wir die Arbeiten so, dass alle Uniformen rechtzeitig zur Session fertig sind.",
       },
     ],
     faqs: [
       {
         question: "Wann sollte ich mein Karnevalskostüm zum Ändern bringen?",
         answer:
-          "So früh wie möglich – am besten einige Wochen vor dem 11.11. oder vor dem Straßenkarneval. Kurz vor den Karnevalstagen haben wir sehr viele Aufträge, und je nach Aufwand braucht eine Änderung ihre Zeit. Wer früh kommt, hat sein Kostüm sicher rechtzeitig zurück.",
+          "Kommen Sie einfach vorbei, sobald Sie wissen, was geändert werden soll. Je früher Sie Ihr Kostüm bringen, desto entspannter wird es für Sie – besonders vor dem 11.11. und vor den Karnevalstagen, wenn bei uns viel los ist.",
       },
       {
         question: "Geht es auch kurz vor Karneval noch?",
         answer:
-          "Fragen Sie uns gern – wir versuchen immer zu helfen. Ob es kurzfristig klappt, hängt aber vom Aufwand und davon ab, wie viele Aufträge wir gerade haben. Garantieren können wir es kurz vor den Karnevalstagen nicht, deshalb lieber früh vorbeikommen.",
+          "Kommen Sie vorbei – bei uns gibt es für jede Sache eine Lösung. Für eilige Aufträge bieten wir auch einen Express-Service an. Sprechen Sie uns bei der Abgabe einfach an, bis wann Sie Ihr Kostüm brauchen.",
       },
       {
         question: "Ändern Sie auch Vereinsuniformen?",
         answer:
-          "Ja, wir passen auch Uniformen an und reparieren sie. Bei mehreren Uniformen für einen Verein sprechen Sie uns am besten frühzeitig an, damit wir die Arbeiten gut planen können.",
+          "Ja, wir passen auch Uniformen an und reparieren sie. Bei mehreren Uniformen für einen Verein planen wir die Arbeiten gern gemeinsam mit Ihnen.",
       },
       {
         question: "Kann ich mein Kostüm nach Karneval reinigen lassen?",
