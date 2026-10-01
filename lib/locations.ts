@@ -57,9 +57,9 @@ export const locations: LocationPage[] = [
   {
     slug: "aenderungsschneiderei-bonn",
     city: "Bonn",
-    title: "Änderungsschneiderei nahe Bonn – nur 14 Min. entfernt",
+    title: "Änderungsschneiderei für Bonn – direkt nebenan in Alfter",
     description:
-      "Änderungsschneiderei für Bonn: Zauberhände in Alfter, nur 14 Minuten von Bonn. Hosen kürzen, Kleider ändern, Reparaturen, Reinigung. Ohne Termin.",
+      "Ihre Änderungsschneiderei direkt an der Bonner Stadtgrenze: Hosen kürzen, Kleider ändern, Reparaturen, Reinigung. Ohne Termin, Parkplätze vor der Tür.",
     h1: "Änderungsschneiderei für Bonn – direkt nebenan in Alfter",
     intro:
       "Sie suchen eine Änderungsschneiderei in Bonn? Zauberhände liegt direkt an der Stadtgrenze in Alfter – mit Bus, Bahn oder Auto nur rund 14 Minuten entfernt.",
@@ -97,9 +97,9 @@ export const locations: LocationPage[] = [
   {
     slug: "aenderungsschneiderei-bornheim",
     city: "Bornheim",
-    title: "Änderungsschneiderei nahe Bornheim – nur 10 Min. entfernt",
+    title: "Änderungsschneiderei für Bornheim – direkt nebenan in Alfter",
     description:
-      "Änderungsschneiderei für Bornheim: Zauberhände in Alfter, etwa 10 Minuten von Bornheim. Hosen kürzen, Kleider ändern, Reparaturen, Reinigung. Ohne Termin.",
+      "Ihre Änderungsschneiderei im Vorgebirge, direkt neben Bornheim: Hosen kürzen, Kleider ändern, Reparaturen, Reinigung. Ohne Termin, Parkplätze vor der Tür.",
     h1: "Änderungsschneiderei für Bornheim – in 10 Minuten in Alfter",
     intro:
       "Aus Bornheim sind Sie in etwa 10 Minuten bei Zauberhände in Alfter. Ob Hose kürzen, Kleid anpassen oder Reißverschluss ersetzen – bei uns bekommen Sie alles aus einer Hand.",
@@ -139,7 +139,7 @@ export const locations: LocationPage[] = [
     city: "Wesseling",
     title: "Änderungsschneiderei nahe Wesseling – Zauberhände Alfter",
     description:
-      "Änderungsschneiderei für Wesseling und die Region: Zauberhände in Alfter, rund 20 Minuten mit dem Auto. Änderungen, Reparaturen, Reinigung. Ohne Termin.",
+      "Änderungsschneiderei für Wesseling und die Region: Zauberhände in Alfter. Hosen kürzen, Kleider ändern, Reparaturen, Reinigung. Ohne Termin, Parkplätze vor der Tür.",
     h1: "Änderungsschneiderei für Wesseling & die Region",
     intro:
       "Unsere Schneiderei in Alfter ist auch aus Wesseling und der Region zwischen Köln und Bonn gut erreichbar. Mit dem Auto sind Sie in rund 20 Minuten bei Zauberhände.",
