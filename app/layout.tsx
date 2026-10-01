@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Zauberhände",
   },
   description:
-    "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Hosen kürzen, Kleider ändern, Reparaturen & Reinigungsannahme – ohne Termin. Nur 14 Min. von Bonn, 10 Min. von Bornheim. Express-Service verfügbar.",
+    "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Hosen kürzen, Kleider ändern, Reparaturen & Reinigungsannahme – ohne Termin, direkt an der Bonner Stadtgrenze. Express-Service verfügbar.",
   authors: [{ name: "Zauberhände Änderungsschneiderei" }],
   creator: "Zauberhände Änderungsschneiderei",
   publisher: "Zauberhände Änderungsschneiderei",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zauberhände – Änderungsschneiderei in Alfter bei Bonn & Bornheim",
     description:
-      "Professionelle Änderungsschneiderei & Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Min. von Bonn, 10 Min. von Bornheim. Hosen kürzen, Kleider ändern und Reinigungsannahme – ohne Termin.",
+      "Professionelle Änderungsschneiderei & Textilreinigung in Alfter, direkt an der Grenze zu Bonn und Bornheim. Hosen kürzen, Kleider ändern und Reinigungsannahme – ohne Termin.",
     siteName: "Zauberhände",
     locale: "de_DE",
     type: "website",
@@ -95,7 +95,7 @@ export default function RootLayout({
               name: "Zauberhände Änderungsschneiderei",
               alternateName: "Zauberhände",
               description:
-                "Professionelle Änderungsschneiderei und Textilreinigung in Alfter bei Bonn & Bornheim. Nur 14 Minuten von Bonn, 10 Minuten von Bornheim entfernt.",
+                "Professionelle Änderungsschneiderei und Textilreinigung in Alfter, direkt an der Grenze zu Bonn und Bornheim.",
               url: "https://zh-alfter.de",
               image: ["https://zh-alfter.de/alfter-video-thumbnail.webp", "https://zh-alfter.de/og-image.jpg"],
               hasMap: MAPS_URL,

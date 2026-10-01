@@ -8,7 +8,7 @@ import Link from "next/link"
 
 const title = "Kontakt & Öffnungszeiten – Schneiderei Alfter bei Bonn"
 const description =
-  "Zauberhände, Holzgasse 13a in Alfter – nur 14 Min. von Bonn. Tel. 02222 62779. Mo–Sa ab 10 Uhr, Mo/Di/Do/Fr bis 18 Uhr. Ohne Termin vorbeikommen."
+  "Zauberhände, Holzgasse 13a in Alfter, direkt an der Bonner Stadtgrenze. Tel. 02222 62779. Mo–Sa ab 10 Uhr, Mo/Di/Do/Fr bis 18 Uhr. Ohne Termin vorbeikommen."
 
 export const metadata: Metadata = {
   title: { absolute: title },
