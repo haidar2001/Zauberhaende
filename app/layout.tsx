@@ -79,7 +79,7 @@ export default function RootLayout({
               "@id": "https://zh-alfter.de/#website",
               url: "https://zh-alfter.de",
               name: "Zauberhände",
-              alternateName: ["Zauberhände Änderungsschneiderei", "zh-alfter.de"],
+              alternateName: ["Zauberhände Änderungsschneiderei", "Zauberhände Alfter"],
               inLanguage: "de-DE",
               publisher: { "@id": "https://zh-alfter.de/#business" },
             }),
