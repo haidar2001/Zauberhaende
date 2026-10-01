@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
+import { MobileContactBar } from "@/components/mobile-contact-bar"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { MAPS_URL } from "@/lib/business"
 
@@ -232,6 +233,9 @@ export default function RootLayout({
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
+        {/* Platz für die feste Kontaktleiste am Handy, in Footer-Farbe */}
+        <div aria-hidden="true" className="h-14 bg-primary md:hidden" />
+        <MobileContactBar />
         <CookieBanner />
         <SpeedInsights />
 
