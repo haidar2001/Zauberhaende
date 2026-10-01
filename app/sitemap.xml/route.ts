@@ -7,7 +7,7 @@ export const dynamic = "force-static"
 
 const baseUrl = "https://zh-alfter.de"
 // Festes Datum statt new Date(): bei inhaltlichen Änderungen hier anpassen
-const lastUpdated = "2026-09-30"
+const lastUpdated = "2026-10-01"
 
 interface SitemapEntry {
   path: string
