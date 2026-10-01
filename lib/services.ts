@@ -297,6 +297,65 @@ export const services: ServicePage[] = [
       },
     ],
   },
+  {
+    slug: "karnevalskostueme",
+    name: "Karnevalskostüme",
+    title: "Karnevalskostüm ändern & reinigen in Alfter bei Bonn",
+    description:
+      "Karnevalskostüm und Uniform ändern, kürzen, reparieren und reinigen lassen in Alfter bei Bonn & Bornheim. Früh bringen, entspannt feiern – ohne Termin.",
+    h1: "Karnevalskostüm & Uniform ändern und reinigen in Alfter",
+    intro:
+      "Ob Gardeuniform, Funkenkostüm oder Kostüm für den Straßenkarneval: In unserer Änderungsschneiderei in Alfter passen wir Ihre Karnevalskleidung an, reparieren sie und nehmen sie nach der Session zur Reinigung an – für Jecken aus Alfter, Bonn, Bornheim und dem ganzen Vorgebirge.",
+    details: [
+      "Karnevalskostüme kürzen, enger oder weiter machen",
+      "Uniformen anpassen und reparieren",
+      "Aufgegangene Nähte und Risse reparieren",
+      "Reißverschlüsse ersetzen",
+      "Kostüme und Uniformen zur Reinigung annehmen",
+    ],
+    sections: [
+      {
+        heading: "Bringen Sie Ihr Kostüm früh genug",
+        text: "Vor dem 11.11. und in den Wochen vor Weiberfastnacht und Rosenmontag kommen viele Kostüme und Uniformen gleichzeitig zu uns. Je nach Aufwand braucht eine Änderung ihre Zeit – besonders bei aufwendigen Uniformen oder wenn mehrere Teile angepasst werden müssen. Bringen Sie Ihr Kostüm deshalb am besten einige Wochen vor dem Termin vorbei. So bleibt genug Zeit für die Änderung und eine Anprobe, und Sie können entspannt in die Session starten.",
+      },
+      {
+        heading: "Kostüme und Uniformen anpassen",
+        text: "Das gekaufte Kostüm ist zu lang, die Uniform vom letzten Jahr spannt oder ist zu weit geworden? Wir kürzen Hosen, Röcke und Ärmel, machen Kostüme enger oder weiter, reparieren Nähte und ersetzen Reißverschlüsse. Bringen Sie am besten die Schuhe mit, die Sie zum Kostüm tragen – dann stecken wir die Länge direkt richtig ab.",
+      },
+      {
+        heading: "Nach dem Karneval: reinigen lassen",
+        text: "Nach Aschermittwoch ist der beste Zeitpunkt, Kostüme und Uniformen reinigen zu lassen – bevor Flecken sich festsetzen und alles bis zur nächsten Session im Schrank verschwindet. Geben Sie Ihre Karnevalskleidung einfach bei uns in Alfter ab. Wir leiten sie an unsere Partner-Fachreinigung weiter, und Sie holen alles sauber bei uns wieder ab.",
+      },
+      {
+        heading: "Für Karnevalsvereine",
+        text: "Sie möchten mehrere Uniformen für Ihre Garde, Tanzgruppe oder Ihren Verein anpassen oder reinigen lassen? Sprechen Sie uns frühzeitig an, damit wir die Arbeiten gemeinsam planen können – am besten schon einige Wochen vor der Sessionseröffnung.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Wann sollte ich mein Karnevalskostüm zum Ändern bringen?",
+        answer:
+          "So früh wie möglich – am besten einige Wochen vor dem 11.11. oder vor dem Straßenkarneval. Kurz vor den Karnevalstagen haben wir sehr viele Aufträge, und je nach Aufwand braucht eine Änderung ihre Zeit. Wer früh kommt, hat sein Kostüm sicher rechtzeitig zurück.",
+      },
+      {
+        question: "Geht es auch kurz vor Karneval noch?",
+        answer:
+          "Fragen Sie uns gern – wir versuchen immer zu helfen. Ob es kurzfristig klappt, hängt aber vom Aufwand und davon ab, wie viele Aufträge wir gerade haben. Garantieren können wir es kurz vor den Karnevalstagen nicht, deshalb lieber früh vorbeikommen.",
+      },
+      {
+        question: "Ändern Sie auch Vereinsuniformen?",
+        answer:
+          "Ja, wir passen auch Uniformen an und reparieren sie. Bei mehreren Uniformen für einen Verein sprechen Sie uns am besten frühzeitig an, damit wir die Arbeiten gut planen können.",
+      },
+      {
+        question: "Kann ich mein Kostüm nach Karneval reinigen lassen?",
+        answer:
+          "Ja. Sie geben Kostüme und Uniformen bei uns in Alfter ab, wir leiten sie an unsere Partner-Fachreinigung weiter und Sie holen alles bei uns wieder ab. Bei der Abgabe sagen wir Ihnen, wann es fertig ist.",
+      },
+      priceFaq,
+      appointmentFaq,
+    ],
+  },
 ]
 
 export function getService(slug: string) {
