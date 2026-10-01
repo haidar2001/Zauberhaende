@@ -104,19 +104,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/85 lg:via-black/40 lg:to-transparent" />
 
         {/* Text Content - Left side on desktop, bottom on mobile */}
-        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-30 lg:pb-0">
+        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-40 lg:pb-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-xl lg:max-w-2xl">
               <header>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
+                <h1 className="text-3xl min-[390px]:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
                   <span className="text-[#c89b3c] font-semibold">Zauberhände</span>{" "}
                   <br />
                   Änderungsschneiderei in Alfter bei Bonn & Bornheim
                 </h1>
               </header>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button asChild size="lg" className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <a href="tel:+49222262779" className="flex items-center">
+                {/* Am Handy übernimmt die feste Kontaktleiste das Anrufen */}
+                <Button asChild size="lg" className="hidden md:flex text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <a href="tel:+49222262779" className="items-center">
                     Jetzt anrufen
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
