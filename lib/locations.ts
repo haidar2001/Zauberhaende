@@ -100,7 +100,7 @@ export const locations: LocationPage[] = [
     title: "Änderungsschneiderei für Bornheim – direkt nebenan in Alfter",
     description:
       "Ihre Änderungsschneiderei im Vorgebirge, direkt neben Bornheim: Hosen kürzen, Kleider ändern, Reparaturen, Reinigung. Ohne Termin, Parkplätze vor der Tür.",
-    h1: "Änderungsschneiderei für Bornheim – in 10 Minuten in Alfter",
+    h1: "Änderungsschneiderei für Bornheim – direkt nebenan in Alfter",
     intro:
       "Aus Bornheim sind Sie in etwa 10 Minuten bei Zauberhände in Alfter. Ob Hose kürzen, Kleid anpassen oder Reißverschluss ersetzen – bei uns bekommen Sie alles aus einer Hand.",
     arrival:
