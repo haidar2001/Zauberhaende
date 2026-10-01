@@ -97,7 +97,7 @@ export default function HomePage() {
       />
       <Navigation />
 
-      <section className="relative min-h-screen w-full overflow-hidden bg-black">
+      <section data-track-position="Startseite oben" className="relative min-h-screen w-full overflow-hidden bg-black">
         <ProgressiveHeroMedia />
 
         {/* Gradient Overlay - Dark on left (desktop) or bottom (mobile), fading to transparent */}

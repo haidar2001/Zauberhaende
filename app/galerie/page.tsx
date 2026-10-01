@@ -54,6 +54,8 @@ export default function GaleriePage() {
                   key={item.id}
                   className="group relative overflow-hidden rounded-lg bg-card border border-border hover:shadow-lg transition-all duration-300 cursor-pointer"
                   onClick={() => openLightbox(index)}
+                  data-umami-event="Galerie Bild geöffnet"
+                  data-umami-event-bild={item.title}
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     {item.type === "image" ? (

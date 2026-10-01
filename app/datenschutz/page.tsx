@@ -80,6 +80,26 @@ export default function DatenschutzPage() {
                     Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
                   </p>
                 </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">Hosting und Ladezeit-Messung (Vercel)</h3>
+                  <p>
+                    Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA gehostet. Zur
+                    Verbesserung der Ladezeiten nutzen wir Vercel Speed Insights. Dabei werden technische Messwerte zur
+                    Ladegeschwindigkeit ohne Cookies erfasst. Rechtsgrundlage ist unser berechtigtes Interesse an einer
+                    schnellen und stabilen Website (Art. 6 Abs. 1 lit. f DSGVO).
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-foreground mb-2">Besucherstatistik (Umami)</h3>
+                  <p>
+                    Um zu verstehen, wie unsere Website genutzt wird, verwenden wir den Analysedienst Umami (Umami
+                    Software, Inc.). Umami erfasst anonymisierte Nutzungsdaten, etwa aufgerufene Seiten, die Herkunft
+                    eines Besuchs, Gerätetyp und Browser sowie Klicks auf Schaltflächen wie „Anrufen“, „Route“ oder
+                    „E-Mail“. Es werden keine Cookies gesetzt und keine IP-Adressen gespeichert; ein Rückschluss auf Ihre
+                    Person ist nicht möglich. Rechtsgrundlage ist unser berechtigtes Interesse an der Verbesserung
+                    unseres Angebots (Art. 6 Abs. 1 lit. f DSGVO).
+                  </p>
+                </div>
               </div>
             </section>
 
@@ -145,7 +165,7 @@ export default function DatenschutzPage() {
             </section>
 
             <div className="text-sm text-muted-foreground mt-8 pt-4 border-t border-border">
-              <p>Stand: Januar 2025</p>
+              <p>Stand: Oktober 2026</p>
             </div>
           </div>
         </div>

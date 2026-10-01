@@ -6,6 +6,7 @@ import "./globals.css"
 import { Suspense } from "react"
 import { CookieBanner } from "@/components/cookie-banner"
 import { MobileContactBar } from "@/components/mobile-contact-bar"
+import { Analytics } from "@/components/analytics"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { MAPS_URL } from "@/lib/business"
 
@@ -238,6 +239,7 @@ export default function RootLayout({
         <MobileContactBar />
         <CookieBanner />
         <SpeedInsights />
+        <Analytics />
 
       </body>
     </html>
