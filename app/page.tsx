@@ -97,14 +97,14 @@ export default function HomePage() {
       />
       <Navigation />
 
-      <section data-track-position="Startseite oben" className="relative min-h-screen w-full overflow-hidden bg-black">
+      <section data-track-position="Startseite oben" className="relative min-h-[calc(100svh-4rem)] w-full overflow-hidden bg-black">
         <ProgressiveHeroMedia />
 
         {/* Gradient Overlay - Dark on left (desktop) or bottom (mobile), fading to transparent */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/85 lg:via-black/40 lg:to-transparent" />
 
         {/* Text Content - Left side on desktop, bottom on mobile */}
-        <div className="relative z-10 min-h-screen flex items-end lg:items-center pb-40 lg:pb-0">
+        <div className="relative z-10 min-h-[calc(100svh-4rem)] flex items-end lg:items-center pb-40 lg:pb-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-xl lg:max-w-2xl">
               <header>

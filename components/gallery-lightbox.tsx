@@ -56,11 +56,11 @@ export function GalleryLightbox({ items, currentIndex, onClose, onNavigate }: Ga
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center overscroll-contain">
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        className="absolute top-[max(1rem,env(safe-area-inset-top))] right-[max(1rem,env(safe-area-inset-right))] z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/30 transition-colors"
         aria-label="Schließen"
       >
         <X className="w-6 h-6 text-white" />
@@ -70,7 +70,7 @@ export function GalleryLightbox({ items, currentIndex, onClose, onNavigate }: Ga
       {currentIndex > 0 && (
         <button
           onClick={() => onNavigate(currentIndex - 1)}
-          className="absolute left-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="absolute left-[max(1rem,env(safe-area-inset-left))] z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/30 transition-colors"
           aria-label="Vorheriges"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
@@ -81,7 +81,7 @@ export function GalleryLightbox({ items, currentIndex, onClose, onNavigate }: Ga
       {currentIndex < items.length - 1 && (
         <button
           onClick={() => onNavigate(currentIndex + 1)}
-          className="absolute right-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="absolute right-[max(1rem,env(safe-area-inset-right))] z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/30 transition-colors"
           aria-label="Nächstes"
         >
           <ChevronRight className="w-6 h-6 text-white" />
@@ -92,7 +92,7 @@ export function GalleryLightbox({ items, currentIndex, onClose, onNavigate }: Ga
       <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8">
         <div className="relative max-w-7xl max-h-full w-full h-full flex flex-col items-center justify-center">
           {currentItem.type === "image" ? (
-            <div className="relative w-full h-[70vh] md:h-[80vh]">
+            <div className="relative w-full h-[70svh] md:h-[80svh]">
               <Image
                 src={currentItem.src || "/placeholder.svg"}
                 alt={currentItem.title}
@@ -107,7 +107,7 @@ export function GalleryLightbox({ items, currentIndex, onClose, onNavigate }: Ga
               <video
                 id="lightbox-video"
                 src={currentItem.src}
-                className="w-full h-auto max-h-[70vh] md:max-h-[80vh] rounded-lg"
+                className="w-full h-auto max-h-[70svh] md:max-h-[80svh] rounded-lg"
                 controls
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
