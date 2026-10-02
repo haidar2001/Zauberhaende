@@ -115,7 +115,7 @@ export default function HomePage() {
                 <div className="hero-in mb-5">
                   <OpenStatus />
                 </div>
-                <h1 style={{ "--hero-delay": "80ms" } as React.CSSProperties} className="hero-in text-3xl min-[390px]:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
+                <h1 style={{ "--hero-delay": "80ms" } as React.CSSProperties} className="hero-in text-3xl min-[390px]:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] text-white mb-6 text-balance">
                   <span className="text-[#c89b3c] font-semibold">Zauberhände</span>{" "}
                   <br />
                   Änderungsschneiderei in Alfter bei Bonn & Bornheim
