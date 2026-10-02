@@ -10,6 +10,8 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getService, services } from "@/lib/services"
 import { FaqSection } from "@/components/faq-section"
+import { ReviewsSection } from "@/components/reviews-section"
+import { getReviews } from "@/lib/reviews"
 
 const baseUrl = "https://zh-alfter.de"
 
@@ -159,6 +161,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </p>
           </div>
         </section>
+
+        <ReviewsSection reviews={getReviews(service.slug)} />
 
         <FaqSection faqs={service.faqs} subtitle={`Die wichtigsten Antworten rund um „${service.name}“`} />
 
