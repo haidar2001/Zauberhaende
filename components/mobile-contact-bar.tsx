@@ -2,7 +2,7 @@ import { Mail, Navigation, Phone } from "lucide-react"
 import { MAPS_URL } from "@/lib/business"
 
 const itemClass =
-  "flex min-h-[3.75rem] flex-col items-center justify-center gap-0.5 py-2 text-sm font-semibold transition-[transform,background-color] duration-100 ease-out active:scale-[0.97]"
+  "flex min-h-[3.75rem] flex-col items-center justify-center gap-0.5 py-2 text-sm font-semibold transition-[scale,background-color] duration-100 ease-out active:scale-[0.97]"
 
 export function MobileContactBar() {
   return (

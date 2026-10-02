@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { Reveal } from "@/components/reveal"
 import type { ServiceFaq } from "@/lib/services"
 
 export function FaqSection({
@@ -18,13 +19,12 @@ export function FaqSection({
           <p className="text-muted-foreground text-lg">{subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {faqs.map((faq, index) => (
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-6" stagger={60}>
+          {faqs.map((faq) => (
             <Card
               key={faq.question}
-              className={`hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in duration-500 ${
-                index % 2 === 0 ? "slide-in-from-left" : "slide-in-from-right"
-              }`}
+              data-reveal-item
+              className="hover:shadow-lg transition-shadow duration-300"
             >
               <CardContent className="p-6">
                 <h3 className="font-semibold text-foreground mb-3">{faq.question}</h3>
@@ -32,7 +32,7 @@ export function FaqSection({
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   )

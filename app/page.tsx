@@ -1,3 +1,4 @@
+import type React from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -7,6 +8,9 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { ProgressiveHeroMedia } from "@/components/progressive-hero-media"
 import { FaqSection } from "@/components/faq-section"
+import { Reveal } from "@/components/reveal"
+import { OpenStatus } from "@/components/open-status"
+import { ContactCta } from "@/components/contact-cta"
 import { appointmentFaq, expressFaq, priceFaq } from "@/lib/services"
 
 const title = "Änderungsschneiderei in Alfter bei Bonn & Bornheim"
@@ -108,13 +112,16 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-xl lg:max-w-2xl">
               <header>
-                <h1 className="text-3xl min-[390px]:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
+                <div className="hero-in mb-5">
+                  <OpenStatus />
+                </div>
+                <h1 style={{ "--hero-delay": "80ms" } as React.CSSProperties} className="hero-in text-3xl min-[390px]:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 text-balance">
                   <span className="text-[#c89b3c] font-semibold">Zauberhände</span>{" "}
                   <br />
                   Änderungsschneiderei in Alfter bei Bonn & Bornheim
                 </h1>
               </header>
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <div style={{ "--hero-delay": "220ms" } as React.CSSProperties} className="hero-in flex flex-col sm:flex-row gap-4 mt-8">
                 {/* Am Handy übernimmt die feste Kontaktleiste das Anrufen */}
                 <Button asChild size="lg" className="hidden md:flex text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground">
                   <a href="tel:+49222262779" className="items-center">
@@ -148,8 +155,8 @@ export default function HomePage() {
             </p>
           </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] bg-background border-border">
+          <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12" stagger={100}>
+            <Card data-reveal-item className="group hover:shadow-lg transition-shadow duration-300 bg-background border-border">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
                   <Scissors className="h-8 w-8 text-accent" />
@@ -177,7 +184,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] bg-background border-border">
+            <Card data-reveal-item className="group hover:shadow-lg transition-shadow duration-300 bg-background border-border">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
                   <Shirt className="h-8 w-8 text-accent" />
@@ -203,7 +210,7 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </Reveal>
 
           <div className="text-center">
             <Button
@@ -231,10 +238,10 @@ export default function HomePage() {
             </p>
           </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <article className="relative">
+          <Reveal className="steps-reveal grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12" stagger={180}>
+            <article data-reveal-item className="relative">
               <div className="bg-background rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="step-number w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-bold text-white">1</span>
                 </div>
                 <p className="text-xl font-semibold text-foreground mb-4 text-center">Beratung & Annahme</p>
@@ -243,14 +250,14 @@ export default function HomePage() {
                   direkt ab und nennen Ihnen den Preis vorab.
                 </p>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+              <div aria-hidden="true" className="step-arrow hidden md:block absolute top-1/2 -right-4 z-10">
                 <ArrowRight className="h-8 w-8 text-accent" />
               </div>
             </article>
 
-            <article className="relative">
+            <article data-reveal-item className="relative">
               <div className="bg-background rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="step-number w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-bold text-white">2</span>
                 </div>
                 <p className="text-xl font-semibold text-foreground mb-4 text-center">Professionelle Bearbeitung</p>
@@ -259,14 +266,14 @@ export default function HomePage() {
                   präzise und mit Qualitätsgarantie.
                 </p>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+              <div aria-hidden="true" className="step-arrow hidden md:block absolute top-1/2 -right-4 z-10">
                 <ArrowRight className="h-8 w-8 text-accent" />
               </div>
             </article>
 
-            <article>
+            <article data-reveal-item>
               <div className="bg-background rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="step-number w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-bold text-white">3</span>
                 </div>
                 <p className="text-xl font-semibold text-foreground mb-4 text-center">Abholung & Freude</p>
@@ -276,9 +283,10 @@ export default function HomePage() {
                 </p>
               </div>
             </article>
-          </div>
+          </Reveal>
 
-          <div className="bg-background border border-accent/20 rounded-lg p-8 max-w-3xl mx-auto text-center">
+          <Reveal>
+          <div data-reveal-item className="bg-background border border-accent/20 rounded-lg p-8 max-w-3xl mx-auto text-center">
             <h3 className="text-xl font-semibold text-foreground mb-4">
               Kostenlose Beratung für Ihre Änderungswünsche
             </h3>
@@ -307,6 +315,7 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
+          </Reveal>
         </div>
       </section>
 
@@ -318,9 +327,9 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <article className="text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
+          <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-8" stagger={100}>
+            <article data-reveal-item className="text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Leaf className="h-8 w-8 text-accent" />
               </div>
               <p className="text-xl font-semibold text-foreground mb-4">Nachhaltige Textilreparatur</p>
@@ -330,8 +339,8 @@ export default function HomePage() {
               </p>
             </article>
 
-            <article className="text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
+            <article data-reveal-item className="text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="h-8 w-8 text-accent" />
               </div>
               <p className="text-xl font-semibold text-foreground mb-4">Schneller Service</p>
@@ -341,8 +350,8 @@ export default function HomePage() {
               </p>
             </article>
 
-            <article className="text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
+            <article data-reveal-item className="text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="h-8 w-8 text-accent" />
               </div>
               <p className="text-xl font-semibold text-foreground mb-4">Qualitätsgarantie</p>
@@ -350,7 +359,7 @@ export default function HomePage() {
                 Höchste Qualitätsstandards und persönliche Beratung für optimale Ergebnisse bei jedem Auftrag.
               </p>
             </article>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -372,8 +381,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-background border-border">
+          <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            <Card data-reveal-item className="group hover:shadow-lg transition-shadow duration-300 bg-background border-border">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <MapPin className="h-6 w-6 text-accent" />
@@ -391,7 +400,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-accent/5 border-accent/20">
+            <Card data-reveal-item className="group hover:shadow-lg transition-shadow duration-300 bg-accent/5 border-accent/20">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Train className="h-6 w-6 text-accent" />
@@ -409,7 +418,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-accent/5 border-accent/20">
+            <Card data-reveal-item className="group hover:shadow-lg transition-shadow duration-300 bg-accent/5 border-accent/20">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/30 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
@@ -427,7 +436,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 bg-background border-border">
+            <Card data-reveal-item className="group hover:shadow-lg transition-shadow duration-300 bg-background border-border">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
                   <Car className="h-6 w-6 text-accent" />
@@ -440,7 +449,7 @@ export default function HomePage() {
                 <p className="text-sm text-muted-foreground">Nur 20 Minuten mit dem Auto</p>
               </CardContent>
             </Card>
-          </div>
+          </Reveal>
 
           <div className="text-center">
             <Button
@@ -466,9 +475,9 @@ export default function HomePage() {
               nennen wir Ihnen vorab, nachdem wir Ihr Kleidungsstück gesehen haben.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" stagger={50}>
             {serviceOverview.map((service) => (
-              <Card key={service.slug} className="hover:shadow-lg transition-shadow duration-300">
+              <Card data-reveal-item key={service.slug} className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     <Link href={`/leistungen/${service.slug}`} className="hover:text-accent hover:underline">
@@ -479,11 +488,13 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <FaqSection faqs={homeFaqs} />
+
+      <ContactCta />
 
       <Footer />
     </div>

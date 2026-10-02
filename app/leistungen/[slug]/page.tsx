@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { ContactCta } from "@/components/contact-cta"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, CheckCircle, DoorOpen, MapPin } from "lucide-react"
@@ -174,27 +175,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-light mb-6">Fragen? Rufen Sie uns an</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-base px-8" asChild>
-                <a href="tel:+49222262779" className="flex items-center">
-                  Jetzt anrufen
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-base px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
-                asChild
-              >
-                <Link href="/kontakt">Öffnungszeiten & Anfahrt</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        <ContactCta title={`Fragen zu „${service.name}“? Rufen Sie uns an`} />
       </main>
 
       <Footer />
