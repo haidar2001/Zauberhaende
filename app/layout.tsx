@@ -8,7 +8,7 @@ import { CookieBanner } from "@/components/cookie-banner"
 import { MobileContactBar } from "@/components/mobile-contact-bar"
 import { Analytics } from "@/components/analytics"
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { MAPS_URL } from "@/lib/business"
+import { CLOSED_DAYS, MAPS_URL } from "@/lib/business"
 
 
 // viewportFit "cover" ist nötig, damit env(safe-area-inset-*) echte Werte liefert
@@ -161,6 +161,14 @@ export default function RootLayout({
                 closes: "13:00",
               },
             ],
+              // Ausnahmen wie Feiertage: an diesen Tagen geschlossen
+              specialOpeningHoursSpecification: Object.keys(CLOSED_DAYS).map((date) => ({
+                "@type": "OpeningHoursSpecification",
+                opens: "00:00",
+                closes: "00:00",
+                validFrom: date,
+                validThrough: date,
+              })),
               priceRange: "€€",
               currenciesAccepted: "EUR",
               areaServed: [

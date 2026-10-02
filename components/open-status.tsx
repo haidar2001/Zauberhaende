@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
+import { CLOSED_DAYS } from "@/lib/business"
 
 // Öffnungszeiten in Minuten ab Mitternacht (0 = Sonntag … 6 = Samstag)
 const HOURS: Record<number, [number, number][]> = {
@@ -14,6 +15,16 @@ const HOURS: Record<number, [number, number][]> = {
   6: [[600, 780]],
 }
 const DAY_NAMES = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
+const DAY_SHORT = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
+
+// Datum in Berlin als JJJJ-MM-TT, "offset" Tage ab jetzt
+function berlinDate(offset = 0) {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin" }).format(
+    new Date(Date.now() + offset * 86_400_000),
+  )
+}
+
+const isClosed = (offset: number) => berlinDate(offset) in CLOSED_DAYS
 
 // "18" statt "18:00" – kurz genug, damit die Anzeige auch am kleinen Handy einzeilig bleibt
 const fmt = (m: number) => (m % 60 === 0 ? String(m / 60) : `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`)
@@ -31,7 +42,29 @@ function berlinNow() {
   return { day, minutes: Number(get("hour")) * 60 + Number(get("minute")) }
 }
 
+// Nächster regulär geöffneter Tag ab morgen, Feiertage werden übersprungen
+function nextOpening(day: number) {
+  for (let i = 1; i <= 14; i++) {
+    const d = (day + i) % 7
+    if (HOURS[d].length && !isClosed(i)) return { i, d, opens: HOURS[d][0][0] }
+  }
+  return null
+}
+
 export function getOpenStatus({ day, minutes } = berlinNow()) {
+  const next = nextOpening(day)
+
+  // Heute Feiertag: geschlossen, nächste Öffnung nennen
+  if (isClosed(0)) {
+    const label = CLOSED_DAYS[berlinDate(0)]
+    return {
+      open: false,
+      text: next
+        ? `Heute geschlossen (${label}) · ${next.i === 1 ? "morgen" : DAY_SHORT[next.d]} ab ${fmt(next.opens)} Uhr`
+        : `Heute geschlossen (${label})`,
+    }
+  }
+
   const today = HOURS[day]
   const idx = today.findIndex(([o, c]) => minutes >= o && minutes < c)
 
@@ -60,14 +93,18 @@ export function getOpenStatus({ day, minutes } = berlinNow()) {
     }
   }
 
-  for (let i = 1; i <= 7; i++) {
-    const d = (day + i) % 7
-    if (HOURS[d].length) {
-      const when = i === 1 ? "morgen" : DAY_NAMES[d]
-      return { open: false, text: `Öffnet ${when} um ${fmt(HOURS[d][0][0])} Uhr` }
+  if (!next) return { open: false, text: "" }
+
+  // Morgen wäre normal geöffnet, ist aber Feiertag: das klar sagen
+  if (HOURS[(day + 1) % 7].length && isClosed(1)) {
+    return {
+      open: false,
+      text: `Morgen geschlossen (${CLOSED_DAYS[berlinDate(1)]}) · ${DAY_SHORT[next.d]} ab ${fmt(next.opens)} Uhr`,
     }
   }
-  return { open: false, text: "" }
+
+  const when = next.i === 1 ? "morgen" : DAY_NAMES[next.d]
+  return { open: false, text: `Öffnet ${when} um ${fmt(next.opens)} Uhr` }
 }
 
 /** Live-Anzeige "Jetzt geöffnet" – wird erst im Browser berechnet (keine falsche Uhrzeit aus dem Build). */
