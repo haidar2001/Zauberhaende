@@ -342,14 +342,23 @@
   animation: reviews-marquee var(--marquee-duration, 60s) linear infinite;
 }
 
-.reviews-marquee:hover .reviews-marquee-track,
+/* Anhalten: mit Maus beim Drüberfahren, am Handy nur solange der Finger drauf ist
+   (ungegatetes :hover bliebe am Handy nach dem Antippen "kleben") */
+.reviews-marquee:active .reviews-marquee-track,
 .reviews-marquee:focus-within .reviews-marquee-track {
   animation-play-state: paused;
+}
+@media (hover: hover) and (pointer: fine) {
+  .reviews-marquee:hover .reviews-marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reviews-marquee {
     overflow-x: auto;
+    /* Wischen im Band löst am Ende nicht "Zurück" im Browser aus */
+    overscroll-behavior-x: contain;
   }
   .reviews-marquee-track {
     animation: none;

@@ -52,8 +52,17 @@ export default function GaleriePage() {
               {items.map((item, index) => (
                 <div
                   key={item.id}
-                  className="group relative overflow-hidden rounded-lg bg-card border border-border hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${item.title} vergrößern`}
+                  className="group relative overflow-hidden rounded-lg bg-card border border-border hover:shadow-lg transition-[box-shadow,scale] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.98] cursor-pointer"
                   onClick={() => openLightbox(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault()
+                      openLightbox(index)
+                    }
+                  }}
                   data-umami-event="Galerie Bild geöffnet"
                   data-umami-event-bild={item.title}
                 >
