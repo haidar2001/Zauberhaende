@@ -299,6 +299,88 @@
   }
 }
 
+/* --- Typografie (Apple): große Schrift enger laufen lassen, Fließtext bleibt bei 0 --- */
+h1 {
+  letter-spacing: -0.022em;
+}
+h2 {
+  letter-spacing: -0.015em;
+}
+
+/* --- Mobiles Menü: klappt auf und auf demselben Weg wieder zu, jederzeit umkehrbar --- */
+.mobile-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 280ms var(--ease-out);
+}
+.mobile-menu[data-open] {
+  grid-template-rows: 1fr;
+}
+.mobile-menu-inner {
+  min-height: 0; /* sonst schrumpft die Grid-Zeile nicht und der Inhalt ragt heraus */
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 200ms var(--ease-out),
+    transform 280ms var(--ease-out);
+}
+.mobile-menu[data-open] .mobile-menu-inner {
+  opacity: 1;
+  transform: none;
+}
+/* Burger ↔ X: beide Symbole an derselben Stelle, das eine dreht hinaus, das andere hinein */
+.menu-toggle svg {
+  transition:
+    opacity 180ms var(--ease-out),
+    transform 260ms var(--ease-out);
+}
+.menu-toggle .menu-icon-close {
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.8);
+}
+.menu-toggle[data-open] .menu-icon-open {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.8);
+}
+.menu-toggle[data-open] .menu-icon-close {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Galerie-Vollbild: Glas-Knöpfe, sofortiges Druck-Feedback --- */
+.lightbox-btn {
+  background: rgb(255 255 255 / 0.12);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition:
+    background-color 150ms ease,
+    scale 120ms var(--ease-out);
+}
+.lightbox-btn:active {
+  scale: 0.92;
+  background: rgb(255 255 255 / 0.28);
+}
+@media (hover: hover) and (pointer: fine) {
+  .lightbox-btn:hover {
+    background: rgb(255 255 255 / 0.22);
+  }
+}
+
+/* --- Weniger Transparenz gewünscht: Navigation und Glas-Knöpfe deckend --- */
+@media (prefers-reduced-transparency: reduce) {
+  .site-nav {
+    background: var(--background) !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .lightbox-btn {
+    background: rgb(60 60 60);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
 /* --- Bewegung reduzieren: nur noch sanftes Ein-/Ausblenden, keine Wege --- */
 @media (prefers-reduced-motion: reduce) {
   .hero-in {
@@ -310,6 +392,8 @@
   .open-status-dot[data-open]::after {
     animation: none !important;
   }
+  .mobile-menu-inner,
+  .menu-toggle svg,
   .js .reveal [data-reveal-item],
   .js .steps-reveal .step-number,
   .js .steps-reveal .step-arrow {

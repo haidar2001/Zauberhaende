@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { useCallback, useRef, useState } from "react"
 import { Play, ZoomIn } from "lucide-react"
 import galleryData from "@/data/gallery.json"
 import { GalleryLightbox } from "@/components/gallery-lightbox"
@@ -21,6 +21,8 @@ export default function GaleriePage() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const items = galleryData as GalleryItem[]
+  const tileRefs = useRef<(HTMLDivElement | null)[]>([])
+  const getOriginRect = useCallback((i: number) => tileRefs.current[i]?.getBoundingClientRect() ?? null, [])
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index)
@@ -57,7 +59,15 @@ export default function GaleriePage() {
                   data-umami-event="Galerie Bild geöffnet"
                   data-umami-event-bild={item.title}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div
+                    ref={(el) => {
+                      tileRefs.current[index] = el
+                    }}
+                    // Kachel ausblenden, solange ihr Bild groß geöffnet ist (es "ist" gerade woanders)
+                    className={`relative aspect-[4/3] overflow-hidden ${
+                      lightboxOpen && currentIndex === index ? "opacity-0" : ""
+                    }`}
+                  >
                     {item.type === "image" ? (
                       <Image
                         src={item.src || "/placeholder.svg"}
@@ -128,6 +138,7 @@ export default function GaleriePage() {
           currentIndex={currentIndex}
           onClose={() => setLightboxOpen(false)}
           onNavigate={setCurrentIndex}
+          getOriginRect={getOriginRect}
         />
       )}
 
