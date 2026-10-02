@@ -10,6 +10,8 @@ import { notFound } from "next/navigation"
 import { getLocation, locations } from "@/lib/locations"
 import { appointmentFaq, expressFaq, services } from "@/lib/services"
 import { FaqSection } from "@/components/faq-section"
+import { ReviewsSection } from "@/components/reviews-section"
+import { getReviews } from "@/lib/reviews"
 import { MAPS_URL } from "@/lib/business"
 
 const baseUrl = "https://zh-alfter.de"
@@ -178,6 +180,8 @@ export default function LocationPage({ params }: { params: { standort: string } 
             </div>
           </div>
         </section>
+
+        <ReviewsSection reviews={getReviews(location.slug)} />
 
         <FaqSection faqs={faqs} subtitle={`Die wichtigsten Antworten für Kundinnen und Kunden aus ${location.city}`} />
 

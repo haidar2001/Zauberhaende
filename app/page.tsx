@@ -8,6 +8,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { ProgressiveHeroMedia } from "@/components/progressive-hero-media"
 import { FaqSection } from "@/components/faq-section"
+import { ReviewsSection } from "@/components/reviews-section"
+import { getReviews } from "@/lib/reviews"
 import { Reveal } from "@/components/reveal"
 import { OpenStatus } from "@/components/open-status"
 import { ContactCta } from "@/components/contact-cta"
@@ -226,6 +228,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection reviews={getReviews()} />
 
       <section className="py-20 bg-accent/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
