@@ -82,7 +82,7 @@ export function Navigation() {
                   className={`block px-3 py-2 text-base font-medium transition-all duration-200 hover:scale-105 ${
                     pathname === item.href
                       ? "text-foreground bg-accent/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-accent/5"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent/5 active:bg-accent/10"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

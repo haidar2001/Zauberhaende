@@ -292,7 +292,7 @@ export default function KontaktPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-secondary/20">
+      <section className="py-16 bg-secondary/20 overflow-x-clip">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500">

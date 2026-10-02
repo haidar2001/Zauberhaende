@@ -2,14 +2,14 @@ import { Mail, Navigation, Phone } from "lucide-react"
 import { MAPS_URL } from "@/lib/business"
 
 const itemClass =
-  "flex flex-col items-center justify-center gap-0.5 py-2 text-sm font-semibold transition-colors active:scale-95"
+  "flex min-h-[3.75rem] flex-col items-center justify-center gap-0.5 py-2 text-sm font-semibold transition-[transform,background-color] duration-100 ease-out active:scale-[0.97]"
 
 export function MobileContactBar() {
   return (
     <nav
       aria-label="Schnellkontakt"
       data-track-position="Kontaktleiste Handy"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-primary-foreground/20 bg-primary text-primary-foreground shadow-[0_-4px_12px_rgba(0,0,0,0.15)] pb-[env(safe-area-inset-bottom)]"
+      className="touch-control md:hidden fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 px-[env(safe-area-inset-left,0px)] border-t border-primary-foreground/20 bg-primary text-primary-foreground shadow-[0_-4px_12px_rgba(0,0,0,0.15)] pb-[env(safe-area-inset-bottom)]"
     >
       {/* Anrufen ist die wichtigste Aktion und deshalb in der Akzentfarbe hervorgehoben */}
       <a href="tel:+49222262779" className={`${itemClass} bg-accent text-accent-foreground active:bg-accent/80`}>

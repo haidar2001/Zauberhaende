@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
@@ -10,6 +10,17 @@ import { Analytics } from "@/components/analytics"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { MAPS_URL } from "@/lib/business"
 
+
+// viewportFit "cover" ist nötig, damit env(safe-area-inset-*) echte Werte liefert
+// (sonst ist der Abstand der Kontaktleiste zum Home-Balken am iPhone immer 0).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  // Farbe der Statusleiste/Browserleiste = Hintergrund der Navigation
+  themeColor: "#ffffff",
+  colorScheme: "light",
+}
 
 export const metadata: Metadata = {
   title: {
@@ -235,7 +246,7 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         {/* Platz für die feste Kontaktleiste am Handy, in Footer-Farbe */}
-        <div aria-hidden="true" className="h-14 bg-primary md:hidden" />
+        <div aria-hidden="true" className="h-[calc(3.75rem+env(safe-area-inset-bottom,0px))] bg-primary md:hidden" />
         <MobileContactBar />
         <CookieBanner />
         <SpeedInsights />
