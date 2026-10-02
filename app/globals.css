@@ -533,3 +533,31 @@
     rgba(200, 155, 60, 0.01) 4px
   );
 }
+
+/* Laufband für Kundenbewertungen: bewegt sich langsam von links nach rechts */
+@keyframes reviews-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.reviews-marquee-track {
+  animation: reviews-marquee var(--marquee-duration, 60s) linear infinite;
+}
+
+.reviews-marquee:hover .reviews-marquee-track,
+.reviews-marquee:focus-within .reviews-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee {
+    overflow-x: auto;
+  }
+  .reviews-marquee-track {
+    animation: none;
+  }
+}
