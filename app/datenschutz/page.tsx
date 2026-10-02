@@ -14,7 +14,7 @@ export default function DatenschutzPage() {
       <Navigation />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="animate-in fade-in slide-in-from-bottom duration-500">
+        <div>
           <h1 className="text-4xl font-bold text-foreground mb-8 text-center">Datenschutzerklärung</h1>
 
           <div className="bg-card rounded-lg shadow-sm p-8 space-y-8">

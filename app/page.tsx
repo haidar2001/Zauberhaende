@@ -217,7 +217,7 @@ export default function HomePage() {
           <div className="text-center">
             <Button
               size="lg"
-              className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 transition-transform duration-200"
+              className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
               asChild
             >
               <Link href="/leistungen">
@@ -458,7 +458,7 @@ export default function HomePage() {
           <div className="text-center">
             <Button
               size="lg"
-              className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 transition-transform duration-200"
+              className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
               asChild
             >
               <Link href="/kontakt">

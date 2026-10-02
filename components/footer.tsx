@@ -8,9 +8,9 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="animate-in fade-in slide-in-from-bottom duration-500">
+          <div>
             <div className="flex items-center space-x-3 mb-4 group">
-              <div className="relative w-12 h-12 group-hover:scale-110 transition-transform duration-200">
+              <div className="relative w-12 h-12">
                 <Image
                   src="/images/logo.webp"
                   alt="Zauberhände Logo"
@@ -30,7 +30,7 @@ export function Footer() {
                 href="https://www.facebook.com/people/Zauberh%C3%A4nde-%C3%84nderungsschneiderei/61557229961543/#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-200"
+                className="w-8 h-8 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -41,7 +41,7 @@ export function Footer() {
                 href="https://www.tiktok.com/@zh_alfter"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-200"
+                className="w-8 h-8 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200"
                 aria-label="TikTok"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ export function Footer() {
                 href="https://de.pinterest.com/zauberhaende_alfter/_created/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-200"
+                className="w-8 h-8 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors duration-200"
                 aria-label="Pinterest"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -62,11 +62,11 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+          <div>
             <p className="font-semibold text-lg mb-4">Kontakt</p>
             <div className="space-y-3">
               <div className="flex items-start space-x-3 group">
-                <MapPin className="h-4 w-4 text-accent mt-1 group-hover:scale-110 transition-transform duration-200" />
+                <MapPin className="h-4 w-4 text-accent mt-1" />
                 <span className="text-primary-foreground/80">
                   Zauberhände Änderungsschneiderei
                   <br />
@@ -76,7 +76,7 @@ export function Footer() {
                 </span>
               </div>
               <div className="flex items-center space-x-3 group">
-                <Phone className="h-4 w-4 text-accent group-hover:scale-110 transition-transform duration-200" />
+                <Phone className="h-4 w-4 text-accent" />
                 <a
                   href="tel:+49222262779"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
@@ -85,7 +85,7 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-3 group">
-                <Mail className="h-4 w-4 text-accent group-hover:scale-110 transition-transform duration-200" />
+                <Mail className="h-4 w-4 text-accent" />
                 <a
                   href="mailto:zauberhaende.alfter@gmail.com"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
@@ -96,7 +96,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="animate-in fade-in slide-in-from-bottom duration-500 delay-400">
+          <div>
             <p className="font-semibold text-lg mb-4">Öffnungszeiten</p>
             <div className="space-y-3 text-primary-foreground/80">
               <div>
@@ -127,20 +127,20 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className="border-t border-primary-foreground/20 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center animate-in fade-in slide-in-from-bottom duration-500 delay-600">
+        <div className="border-t border-primary-foreground/20 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-primary-foreground/60 text-sm">
             © {new Date().getFullYear()} Zauberhände Änderungsschneiderei. Alle Rechte vorbehalten.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               href="/datenschutz"
-              className="text-primary-foreground/60 hover:text-primary-foreground text-sm hover:scale-105 transition-all duration-200"
+              className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors duration-200"
             >
               Datenschutz
             </Link>
             <Link
               href="/impressum"
-              className="text-primary-foreground/60 hover:text-primary-foreground text-sm hover:scale-105 transition-all duration-200"
+              className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors duration-200"
             >
               Impressum
             </Link>

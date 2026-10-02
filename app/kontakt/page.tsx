@@ -115,9 +115,9 @@ export default function KontaktPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {/* Address */}
-            <Card className="text-center group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500">
+            <Card className="text-center group hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors group-hover:rotate-12 duration-300">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors duration-300">
                   <MapPin className="h-8 w-8 text-accent" />
                 </div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">Unser Standort</h2>
@@ -143,9 +143,9 @@ export default function KontaktPage() {
             </Card>
 
             {/* Phone & Email */}
-            <Card className="text-center group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+            <Card className="text-center group hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors group-hover:rotate-12 duration-300">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors duration-300">
                   <Phone className="h-8 w-8 text-accent" />
                 </div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">Kontaktdaten</h2>
@@ -168,9 +168,9 @@ export default function KontaktPage() {
             </Card>
 
             {/* Opening Hours */}
-            <Card className="text-center group hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500 delay-400">
+            <Card className="text-center group hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors group-hover:rotate-12 duration-300">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors duration-300">
                   <Clock className="h-8 w-8 text-accent" />
                 </div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">Öffnungszeiten</h2>
@@ -202,7 +202,7 @@ export default function KontaktPage() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <Card className="animate-in fade-in slide-in-from-bottom duration-500 delay-600">
+            <Card>
               <CardHeader>
                 <CardTitle className="text-center text-2xl">
                   <h2>Anfahrt aus Bonn, Bornheim & Umgebung</h2>
@@ -271,14 +271,14 @@ export default function KontaktPage() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
                       href="tel:+49222262779"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200 hover:scale-105 transform"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors duration-200"
                     >
                       <Phone className="h-4 w-4 mr-2" />
                       02222 62779
                     </a>
                     <a
                       href="mailto:zauberhaende.alfter@gmail.com"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors duration-200 hover:scale-105 transform"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors duration-200"
                     >
                       <Mail className="h-4 w-4 mr-2" />
                       E-Mail senden
@@ -295,16 +295,16 @@ export default function KontaktPage() {
       <section className="py-16 bg-secondary/20 overflow-x-clip">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
               Häufige Fragen
             </h2>
-            <p className="text-muted-foreground text-lg animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+            <p className="text-muted-foreground text-lg">
               Die wichtigsten Antworten auf einen Blick
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-left duration-500 delay-300">
+            <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-foreground mb-3">Brauche ich einen Termin?</h3>
                 <p className="text-sm text-muted-foreground">
@@ -313,7 +313,7 @@ export default function KontaktPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-right duration-500 delay-400">
+            <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-foreground mb-3">Wie lange dauern Änderungen?</h3>
                 <p className="text-sm text-muted-foreground">
@@ -323,7 +323,7 @@ export default function KontaktPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-left duration-500 delay-500">
+            <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-foreground mb-3">Kann ich auch Heimtextilien wie Gardinen oder Tischdecken ändern lassen?</h3>
                 <p className="text-sm text-muted-foreground">
@@ -332,7 +332,7 @@ export default function KontaktPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-right duration-500 delay-600">
+            <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-foreground mb-3">Bieten Sie auch Express-Service an?</h3>
                 <p className="text-sm text-muted-foreground">

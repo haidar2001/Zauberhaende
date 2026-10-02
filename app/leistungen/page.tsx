@@ -126,8 +126,8 @@ export default function LeistungenPage() {
       <section className="py-12 border-b border-border overflow-x-clip">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center space-x-4 animate-in fade-in slide-in-from-left duration-500">
-              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                 <Zap className="h-6 w-6 text-accent" />
               </div>
               <div>
@@ -136,8 +136,8 @@ export default function LeistungenPage() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 animate-in fade-in slide-in-from-bottom duration-500 delay-200">
-              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                 <Shield className="h-6 w-6 text-accent" />
               </div>
               <div>
@@ -146,8 +146,8 @@ export default function LeistungenPage() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 animate-in fade-in slide-in-from-right duration-500 delay-400">
-              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                 <Sparkles className="h-6 w-6 text-accent" />
               </div>
               <div>
@@ -177,17 +177,17 @@ export default function LeistungenPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:rotate-12 transition-transform duration-300 animate-in fade-in slide-in-from-bottom duration-500">
+            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Scissors className="h-8 w-8 text-accent" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
               Änderungsschneiderei
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom duration-500 delay-300">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Professionelle Anpassungen für die perfekte Passform. Alle Arbeiten werden von erfahrenen Schneidern
               ausgeführt.
             </p>
-            <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto bg-secondary/30 p-4 rounded-lg animate-in fade-in slide-in-from-bottom duration-500 delay-400">
+            <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto bg-secondary/30 p-4 rounded-lg">
               Die Preise variieren je nach Aufwand und Komplexität der Arbeit. Genaue Kosten können wir Ihnen nach einer
               kostenlosen Beratung mitteilen.
             </p>
@@ -197,8 +197,7 @@ export default function LeistungenPage() {
             {alterationServices.map((category, index) => (
               <Card
                 key={index}
-                className={`h-full hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500`}
-                style={{ animationDelay: `${(index + 1) * 200}ms` }}
+                className={`h-full hover:shadow-lg transition-shadow duration-300`}
               >
                 <CardHeader>
                   <CardTitle className="text-xl text-center">{category.category}</CardTitle>
@@ -228,17 +227,17 @@ export default function LeistungenPage() {
       <section className="py-16 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 hover:rotate-12 transition-transform duration-300 animate-in fade-in slide-in-from-bottom duration-500">
+            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
               <Shirt className="h-8 w-8 text-accent" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 animate-in fade-in slide-in-from-bottom duration-500 delay-200">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
               Reinigungsannahme
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom duration-500 delay-300">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Schonende und umweltfreundliche Reinigung für alle Textilien. Wir arbeiten mit modernsten Verfahren und
               umweltschonenden Mitteln.
             </p>
-            <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto bg-background/50 p-4 rounded-lg animate-in fade-in slide-in-from-bottom duration-500 delay-400">
+            <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto bg-background/50 p-4 rounded-lg">
               Die Preise variieren je nach Aufwand und Komplexität der Arbeit. Genaue Kosten können wir Ihnen nach einer
               kostenlosen Beratung mitteilen.
             </p>
@@ -248,8 +247,7 @@ export default function LeistungenPage() {
             {cleaningServices.map((category, index) => (
               <Card
                 key={index}
-                className={`h-full hover:shadow-lg transition-all duration-300 hover:scale-105 animate-in fade-in slide-in-from-bottom duration-500`}
-                style={{ animationDelay: `${(index + 1) * 200}ms` }}
+                className={`h-full hover:shadow-lg transition-shadow duration-300`}
               >
                 <CardHeader>
                   <CardTitle className="text-xl text-center">{category.category}</CardTitle>

@@ -52,7 +52,7 @@ export default function GaleriePage() {
               {items.map((item, index) => (
                 <div
                   key={item.id}
-                  className="group relative overflow-hidden rounded-lg bg-card border border-border hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  className="group relative overflow-hidden rounded-lg bg-card border border-border hover:shadow-lg transition-shadow duration-300 cursor-pointer"
                   onClick={() => openLightbox(index)}
                   data-umami-event="Galerie Bild geöffnet"
                   data-umami-event-bild={item.title}
@@ -63,7 +63,7 @@ export default function GaleriePage() {
                         src={item.src || "/placeholder.svg"}
                         alt={item.title}
                         fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     ) : (
