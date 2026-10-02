@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ProgressiveHeroMedia() {
   return (
-    <div className="absolute inset-0">
+    <div className="hero-media absolute inset-0">
       <Image
         src="/alfter-video-thumbnail.webp"
         alt="Ladenfront der Zauberhände Änderungsschneiderei in der Holzgasse 13a in Alfter"

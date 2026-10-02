@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { ContactCta } from "@/components/contact-cta"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Scissors, Shirt, CheckCircle, ArrowRight, Zap, Shield, Sparkles } from "lucide-react"
@@ -277,37 +278,7 @@ export default function LeistungenPage() {
       {/* Additional Services */}
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-light mb-6 animate-in fade-in slide-in-from-bottom duration-500">
-            Haben Sie Fragen zu unseren Leistungen?
-          </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom duration-500 delay-200">
-            Rufen Sie uns an für eine kostenlose Beratung oder besuchen Sie uns direkt in unserem Geschäft in Alfter.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom duration-500 delay-400">
-            <Button
-              size="lg"
-              variant="secondary"
-              className="text-base px-8 hover:scale-105 transition-transform duration-200"
-              asChild
-            >
-              <a href="tel:+49222262779" className="flex items-center">
-                Jetzt anrufen
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent hover:scale-105 transition-all duration-200"
-              asChild
-            >
-              <Link href="/kontakt">Kontakt aufnehmen</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ContactCta title="Haben Sie Fragen zu unseren Leistungen?" />
 
       <Footer />
     </div>

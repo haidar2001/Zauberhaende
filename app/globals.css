@@ -165,6 +165,169 @@
   -webkit-touch-callout: none;
 }
 
+/* ==========================================================================
+   Bewegung – gemeinsame Kurven (Emil Kowalski) und alle Seiten-Animationen
+   ========================================================================== */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* --- Startbild: Überschrift und Buttons kommen nacheinander herein --- */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-in {
+  animation: hero-rise 700ms var(--ease-out) both;
+  animation-delay: var(--hero-delay, 0ms);
+}
+/* Startbild zoomt beim Laden ganz leicht zurück – wirkt ruhig und hochwertig */
+@keyframes hero-settle {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.hero-media {
+  animation: hero-settle 1600ms var(--ease-out) both;
+}
+
+/* --- Scroll-Reveal: nur wenn JavaScript läuft, sonst bleibt alles sichtbar --- */
+.js .reveal [data-reveal-item] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 600ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js .reveal[data-visible] [data-reveal-item] {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- "So einfach geht's": Nummern ploppen nacheinander auf, Pfeile schieben nach --- */
+.step-arrow {
+  transform: translateY(-50%);
+}
+.js .steps-reveal .step-number {
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity 400ms var(--ease-out),
+    transform 400ms var(--ease-out);
+  transition-delay: calc(var(--reveal-delay, 0ms) + 150ms);
+}
+.js .steps-reveal .step-arrow {
+  opacity: 0;
+  transform: translate(-8px, -50%);
+  transition:
+    opacity 400ms var(--ease-out),
+    transform 400ms var(--ease-out);
+  transition-delay: calc(var(--reveal-delay, 0ms) + 350ms);
+}
+.js .steps-reveal[data-visible] .step-number {
+  opacity: 1;
+  transform: none;
+}
+.js .steps-reveal[data-visible] .step-arrow {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+/* --- Live-Status "Jetzt geöffnet": ruhiger Puls am grünen Punkt --- */
+.open-status {
+  transition: opacity 300ms var(--ease-out);
+}
+@keyframes status-ping {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+.open-status-dot[data-open]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  animation: status-ping 2s var(--ease-out) infinite;
+}
+
+/* --- Abschluss-CTA: Telefon-Symbol klingelt einmal, wenn der Bereich erscheint --- */
+@keyframes phone-ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  15%,
+  45% {
+    transform: rotate(-14deg);
+  }
+  30%,
+  60% {
+    transform: rotate(14deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+}
+.reveal[data-visible] .cta-call-icon {
+  animation: phone-ring 800ms ease-in-out 900ms 1;
+}
+
+/* --- Druck-Feedback & Hover (Hover nur mit Maus, nicht beim Antippen) --- */
+.cta-link-arrow {
+  transition: transform 200ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cta-link:hover .cta-link-arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* --- Bewegung reduzieren: nur noch sanftes Ein-/Ausblenden, keine Wege --- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-in {
+    animation-name: hero-fade-only;
+    animation-duration: 400ms;
+  }
+  .hero-media,
+  .cta-call-icon,
+  .open-status-dot[data-open]::after {
+    animation: none !important;
+  }
+  .js .reveal [data-reveal-item],
+  .js .steps-reveal .step-number,
+  .js .steps-reveal .step-arrow {
+    transform: none !important;
+  }
+  .js .steps-reveal .step-arrow {
+    transform: translateY(-50%) !important;
+  }
+}
+@keyframes hero-fade-only {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Added custom animations for tailoring theme */
 @keyframes float {
   0%,
