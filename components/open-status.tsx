@@ -15,7 +15,8 @@ const HOURS: Record<number, [number, number][]> = {
 }
 const DAY_NAMES = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
 
-const fmt = (m: number) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`
+// "18" statt "18:00" – kurz genug, damit die Anzeige auch am kleinen Handy einzeilig bleibt
+const fmt = (m: number) => (m % 60 === 0 ? String(m / 60) : `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`)
 
 function berlinNow() {
   const parts = new Intl.DateTimeFormat("en-GB", {
@@ -30,14 +31,34 @@ function berlinNow() {
   return { day, minutes: Number(get("hour")) * 60 + Number(get("minute")) }
 }
 
-export function getOpenStatus() {
-  const { day, minutes } = berlinNow()
+export function getOpenStatus({ day, minutes } = berlinNow()) {
   const today = HOURS[day]
-  const current = today.find(([o, c]) => minutes >= o && minutes < c)
-  if (current) return { open: true, text: `Jetzt geöffnet · bis ${fmt(current[1])} Uhr` }
+  const idx = today.findIndex(([o, c]) => minutes >= o && minutes < c)
+
+  if (idx !== -1) {
+    const closesToday = today[today.length - 1][1]
+    const next = today[idx + 1]
+    // Vormittags an Tagen mit Nachmittagsöffnung: Mittagspause dazusagen,
+    // sonst denkt man, es wäre nur bis 13 Uhr geöffnet.
+    if (next) {
+      return {
+        open: true,
+        text: `Geöffnet bis ${fmt(closesToday)} Uhr · Pause ${fmt(today[idx][1])}–${fmt(next[0])} Uhr`,
+      }
+    }
+    return { open: true, text: `Jetzt geöffnet · bis ${fmt(closesToday)} Uhr` }
+  }
 
   const laterToday = today.find(([o]) => minutes < o)
-  if (laterToday) return { open: false, text: `Öffnet heute um ${fmt(laterToday[0])} Uhr` }
+  if (laterToday) {
+    const isLunchBreak = today.some(([, c]) => minutes >= c)
+    return {
+      open: false,
+      text: isLunchBreak
+        ? `Mittagspause · ab ${fmt(laterToday[0])} Uhr wieder offen`
+        : `Öffnet heute um ${fmt(laterToday[0])} Uhr`,
+    }
+  }
 
   for (let i = 1; i <= 7; i++) {
     const d = (day + i) % 7
