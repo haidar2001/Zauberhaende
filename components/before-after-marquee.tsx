@@ -20,7 +20,7 @@ export function BeforeAfterMarquee() {
   const loop = Array.from({ length: repeat }, () => items).flat()
 
   return (
-    <section className="py-16 bg-card overflow-hidden">
+    <section className="py-16 bg-background overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">Vorher &amp; Nachher aus unserer Werkstatt</h2>
         <p className="text-muted-foreground">Echte Reparaturen und Änderungen aus unserer Schneiderei in Alfter.</p>
@@ -38,7 +38,7 @@ export function BeforeAfterMarquee() {
                   key={`${item.id}-${i}`}
                   href="/galerie"
                   tabIndex={copy === 1 ? -1 : undefined}
-                  className="w-80 sm:w-[26rem] shrink-0 overflow-hidden rounded-xl border border-border bg-background shadow-sm"
+                  className="w-80 sm:w-[26rem] shrink-0 overflow-hidden rounded-xl border border-border bg-card shadow-sm"
                 >
                   <Image
                     src={item.src}
@@ -53,8 +53,8 @@ export function BeforeAfterMarquee() {
             </div>
           ))}
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-card to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-24 bg-gradient-to-l from-card to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-24 bg-gradient-to-l from-background to-transparent" />
       </div>
 
       <div className="text-center mt-8 px-4">
