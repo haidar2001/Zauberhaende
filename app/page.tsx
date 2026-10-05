@@ -215,7 +215,33 @@ export default function HomePage() {
             </Card>
           </Reveal>
 
-          <div className="text-center">
+        </div>
+      </section>
+
+      <section className="py-16 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">Alle Leistungen im Überblick</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Von der Hose bis zum Brautkleid: Diese Arbeiten erledigen wir in unserer Schneiderei in Alfter. Den Preis
+              nennen wir Ihnen vorab, nachdem wir Ihr Kleidungsstück gesehen haben.
+            </p>
+          </div>
+          <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" stagger={50}>
+            {serviceOverview.map((service) => (
+              <Card data-reveal-item key={service.slug} className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <Link href={`/leistungen/${service.slug}`} className="hover:text-accent hover:underline">
+                      {service.name}
+                    </Link>
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{service.text}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </Reveal>
+          <div className="text-center mt-12">
             <Button
               size="lg"
               className="text-base px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -229,8 +255,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <ReviewsSection reviews={getReviews()} />
 
       <BeforeAfterMarquee />
 
@@ -370,7 +394,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-card">
+      <ReviewsSection reviews={getReviews()} tone="card" />
+
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
@@ -470,32 +496,6 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-background">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">Alle Leistungen im Überblick</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Von der Hose bis zum Brautkleid: Diese Arbeiten erledigen wir in unserer Schneiderei in Alfter. Den Preis
-              nennen wir Ihnen vorab, nachdem wir Ihr Kleidungsstück gesehen haben.
-            </p>
-          </div>
-          <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" stagger={50}>
-            {serviceOverview.map((service) => (
-              <Card data-reveal-item key={service.slug} className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    <Link href={`/leistungen/${service.slug}`} className="hover:text-accent hover:underline">
-                      {service.name}
-                    </Link>
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{service.text}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </Reveal>
         </div>
       </section>
 
